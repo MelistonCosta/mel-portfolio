@@ -1,0 +1,112 @@
+footer {
+    backdrop-filter: blur(12px);
+    .footer {
+        .name {
+            font-size: 24px;
+            text-transform: capitalize;
+        }
+        .contact {
+            .icon {
+                background: color(white, 100);
+                color: color(black, 900);
+                border-radius: $round;
+                padding: 0;
+                @include font-custom(14px, 14px);
+                width: 35px;
+                height: 35px;
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: center;
+                transition: $transition-smooth;
+            }
+        }
+    }
+    .designation {
+        font-size: 12vw;
+        text-transform: uppercase;
+        line-height: 1;
+        opacity: .085;
+        -webkit-text-stroke: 4px color(white, 100);
+        color: transparent;
+        margin-top: -10vw;
+        @include bp(mobile) {
+            font-size: 18vw;
+            opacity: .1;
+            -webkit-text-stroke: 1px color(white, 100);
+        }
+    }
+    ul.site-links, ul.quick-links {
+        li {
+            a {
+                @extend %footer-links-hover;
+            }
+        }
+    }
+    ul.personal-details {
+        li {
+            .blocks {
+                .icon {}
+                .content {
+                    a {
+                        @extend %footer-links-hover;
+                    }
+                }
+                &:hover {
+                    .icon {
+                        @extend %footer-icon-hover;
+                    }
+                }
+            }
+        }
+    }
+    ul.follow-details {
+        li {
+            &:hover {
+                .icon {
+                    @extend %footer-icon-hover;
+                }
+            }
+        }
+    }
+    .post-footer {
+        background: transparentize(color(black, 900), .6);
+        backdrop-filter: blur(5px);
+        p {
+            @include font-custom(14px, 22px);
+            i {
+                color: color(blue, 500);
+            }
+        }
+    }
+}
+
+%footer-links-hover {
+    position: relative;
+    color: color(white, 100);
+    transition: $transition-smooth;
+    &::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 0;
+        left: auto;
+        right: 0;
+        bottom: -1px;
+        background-color: color(blue, 500);
+        transition: $transition-smooth;
+    }
+    &:hover {
+        color: color(blue, 500);
+        &::before {
+            width: 100%;
+            right: auto;
+            left: 0;
+        }
+    }
+}
+
+%footer-icon-hover {
+    background-color: color(blue, 500);
+    color: color(white, 100);
+}

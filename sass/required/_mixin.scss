@@ -1,0 +1,82 @@
+@mixin bp($breakpoint) {
+    @if $breakpoint ==desktop-sm {
+        @media (max-width: 1199x) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==tablet {
+        @media (max-width: 991px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==mobile {
+        @media (max-width: 767px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==mobile-sm {
+        @media (max-width: 575px) {
+            @content;
+        }
+    }
+}
+
+
+// @function font-custom($font-size, $line-height, $base-size: 16) {
+//     $font-size-em: $font-size / $base-size * 1em;
+//     $line-height-em: $line-height / $font-size;
+//     @return (font-size: $font-size-em, line-height: $line-height-em);
+// }
+
+// @mixin font-custom($font-size, $line-height, $base-size: 16) {
+//     $output: font-custom($font-size, $line-height, $base-size);
+//     font-size: map-get($output, font-size);
+//     line-height: map-get($output, line-height);
+// }
+
+$baseFontSize: 16px; // Base font size in pixels
+
+// Function to convert px to rem
+@function px-to-rem($px-value) {
+  @return $px-value / $baseFontSize * 1rem;
+}
+
+// Mixin for custom font size and line height
+@mixin font-custom($font-size, $line-height: null) {
+  font-size: px-to-rem($font-size);
+  @if $line-height != null {
+    line-height: px-to-rem($line-height);
+  }
+}
+
+@mixin para-font {
+    @include font-custom(16px, 22px);
+    @include bp(mobile) {
+        @include font-custom(14px, 20px);
+    }
+}
+
+@mixin no-spacing {
+    margin: 0;
+    padding: 0;
+}
+
+@function color($color-name, $shade) {
+    @return map-get(map-get($colors, $color-name), $shade);
+}
+
+@mixin hide-block {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    transition: $transition-smooth;
+}
+
+@mixin show-block {
+    opacity: 1;
+    visibility: visible;
+    max-height: 1000px;
+}

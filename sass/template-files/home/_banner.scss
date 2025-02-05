@@ -1,0 +1,86 @@
+section.home-banner {
+    height: calc(100vh - 90px);
+    @include bp(mobile) {
+        height: auto;
+    }
+    .image-frame {
+        transform: scale(.7);
+        transition: $transition-linear;
+        @include bp(mobile) {
+            margin: 0 auto;
+            max-width: 250px;
+        }
+        img {
+            clip-path: inset(100% 0 0 0);
+            transition: $transition-linear;
+        }
+        &.reveal-me {
+            transform: scale(1);
+            img {
+                clip-path: inset(0 0 0 0);
+            }
+        }
+    }
+    .content {
+        .greet {
+            i {
+                width: 50px;
+                height: 40px;
+                fill: color(white, 100);
+                transform: rotate(5deg);
+                transform-origin: 50% 100%;
+                transition: $transition-smooth;
+                animation: sayHi 2s 2s infinite linear;
+                @include font-custom(36px, 42px);
+                @include bp(mobile) {
+                    width: 30px;
+                    height: 20px;
+                    @include font-custom(20px, 24px);
+                }
+            }
+            @include font-custom(40px, 46px);
+            @include bp(mobile) {
+                @include font-custom(20px, 24px);
+            }
+        }
+        .name {
+            @include font-custom(50px, 56px);
+            @include bp(mobile) {
+                @include font-custom(30px, 34px);
+            }
+            span {
+                color: color(blue, 500);
+            }
+        }
+        .changing-text {
+            @include font-custom(36px, 42px);
+            @include bp(mobile) {
+                @include font-custom(30px, 34px);
+            }
+            .typed {
+                color: color(blue, 500);
+            }
+            .typed-cursor {
+                color: color(blue, 500);
+            }
+        }
+        .description {
+            p {
+                @include font-custom(20px, 26px);
+                color: transparentize(color(white, 100), .5);
+                @include bp(mobile) {
+                    @include font-custom(16px, 22px);
+                }
+            }
+        }
+    }
+    .section-scrolldown {
+        svg {
+            width: 40px;
+            height: 40px;
+            transform: translate(0, 0);
+            animation: anmateYaxis 2s 1s infinite linear;
+            transition: $transition-smooth;
+        }
+    }
+}

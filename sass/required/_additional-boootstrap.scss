@@ -1,0 +1,96 @@
+// Define the custom spacing values for p-6, p-7, p-8, p-9, p-10
+$custom-spacers: (
+    6: 4rem,
+    // Example value for p-6 (64px)
+    7: 5rem,
+    // Example value for p-7 (80px)
+    8: 6rem,
+    // Example value for p-8 (96px)
+    9: 7rem,
+    // Example value for p-9 (112px)
+    10: 8rem,
+    // Example value for p-10 (128px)
+);
+
+// Define Bootstrap responsive breakpoints
+$breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+// Loop through custom spacers to generate padding, margin, and gap classes
+@each $key, $size in $custom-spacers {
+
+    // Non-responsive (default) classes
+    .p-#{$key} {
+        padding: $size !important;
+    }
+
+    .pt-#{$key},
+    .py-#{$key} {
+        padding-top: $size !important;
+    }
+
+    .pb-#{$key},
+    .py-#{$key} {
+        padding-bottom: $size !important;
+    }
+
+    .pl-#{$key},
+    .px-#{$key} {
+        padding-left: $size !important;
+    }
+
+    .pr-#{$key},
+    .px-#{$key} {
+        padding-right: $size !important;
+    }
+
+    .m-#{$key} {
+        margin: $size !important;
+    }
+
+    .gap-#{$key} {
+        gap: $size !important;
+    }
+
+    // Responsive classes
+    @each $breakpoint, $breakpoint-width in $breakpoints {
+        @media (min-width: #{$breakpoint-width}) {
+            .p-#{$breakpoint}-#{$key} {
+                padding: $size !important;
+            }
+
+            .pt-#{$breakpoint}-#{$key},
+            .py-#{$breakpoint}-#{$key} {
+                padding-top: $size !important;
+            }
+
+            .pb-#{$breakpoint}-#{$key},
+            .py-#{$breakpoint}-#{$key} {
+                padding-bottom: $size !important;
+            }
+
+            .pl-#{$breakpoint}-#{$key},
+            .px-#{$breakpoint}-#{$key} {
+                padding-left: $size !important;
+            }
+
+            .pr-#{$breakpoint}-#{$key},
+            .px-#{$breakpoint}-#{$key} {
+                padding-right: $size !important;
+            }
+
+            .m-#{$breakpoint}-#{$key} {
+                margin: $size !important;
+            }
+
+            .gap-#{$breakpoint}-#{$key} {
+                gap: $size !important;
+            }
+        }
+    }
+}

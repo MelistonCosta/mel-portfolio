@@ -1,0 +1,252 @@
+body {
+    cursor: none;
+    font-family: $font-primary;
+    @include para-font;
+    position: relative;
+    color: #FFFFFF;
+    background-color: #000000;
+    transition: $transition-smooth;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    &::before {
+        content: "";
+        background-image: url("../images/background/bg-8.jpg");
+        background-size: 100%;
+        background-repeat: repeat-y;
+        background-attachment: fixed;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        opacity: .5;
+        z-index: -1;
+        @include bp(tablet) {
+            opacity: 1;
+            background-image: url("../images/background/bg-9.jpg");
+            background-size: cover;
+        }
+    }
+    &::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+		background-color: #000000;
+		border-radius: $rounded-more;
+	}
+	&::-webkit-scrollbar {
+		width: 5px;
+		background-color: #000000;
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: $rounded-more;
+		background-image: -webkit-gradient(linear, left bottom, left top,
+		 color-stop(0.44, #00A3FF), color-stop(0.72, #6abfef), color-stop(0.86, #00A3FF));
+	}
+    &.menu-active {
+        overflow: hidden;
+    }
+}
+
+main {
+    padding-top: 90px;
+    position: relative;
+    z-index: 1;
+    @include bp(tablet) {
+        padding-top: 90px;
+    }
+}
+
+p {
+    margin-bottom: 14px;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+h1 {
+    font-family: $font-secondary;
+    color: color(blue, 500);
+}
+
+h2 {
+    font-family: $font-secondary;
+    color: color(blue, 500);
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5, %h5, h6 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: $font-primary-bold;
+    @include para-font;
+}
+
+.title {
+    @extend %h5;
+    color: color(blue, 500);
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    cursor: none !important;
+    text-decoration: none;
+    color: inherit;
+    &:hover, &:focus {
+        color: inherit;
+        box-shadow: none;
+    }
+}
+
+ul, ol {
+    @include no-spacing;
+    list-style: none;
+}
+
+button, .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+    @include para-font;
+    background-color: color(blue, 500);
+    color: color(white, 100);
+    padding: 12px 24px;
+    border: none;
+    border-radius: $rounded;
+    transition: $transition-smooth;
+    i {
+        position: relative;
+        transform: translate(0px, 0px) scale(1);
+        transition: $transition-smooth;
+    }
+    &:hover {
+        box-shadow: -9px -9px 0px -5px color(blue, 700), 9px 9px 0px -5px color(blue, 700);
+        i {
+            transform: translate(1px, -1px) scale(1.1);
+        }
+    }
+}
+
+.swiper.mySwiper {
+    .swiper-wrapper {
+        transition-timing-function: linear !important;
+    }
+    .swiper-pagination {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        left: 0 !important;
+        right: auto;
+        transform: translate(0px) !important;
+        gap: 6px;
+        min-width: 250px;
+        width: auto !important;
+        bottom: 0;
+        z-index: 5;
+        @include bp(tablet) {
+            position: relative;
+            bottom: 0;
+            // padding-bottom: 40px;
+        }
+        span.swiper-pagination-bullet {
+            width: 15px;
+            margin: 0;
+            transform: scale(1);
+            height: 8px;
+            border-radius: $rounded;
+            left: auto !important;
+            opacity: 1;
+            background-color: transparentize(color(white, 100), .5);
+            backdrop-filter: blur(4px);
+            transition: $transition-smooth;
+            &.swiper-pagination-bullet-active-main {
+                width: 50px;
+                background-color: transparentize(color(white, 100), .10);
+            }
+        }
+    }
+}
+
+.kursor {
+    border: 3px solid color(blue, 500) !important;
+    &.hover-link {
+        opacity: 0;
+    }
+}
+.kursorChild {
+    background: color(white, 100) !important;
+    &.hover-link {
+        opacity: 0.4;
+        border-color: color(white, 100) !important;
+        transform: scale(8) translate(0%, 0%);
+        background-color: color(white, 100);
+    }
+}
+
+.logo {
+    a {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        span {
+            font-family: $font-secondary;
+            @include font-custom(30px, 30px);
+            &.arrow {
+                color: color(white, 100);
+                transform: translate(0, 0);
+                transition: $transition-linear;
+                animation: arrowLeft 3s infinite linear;
+                &:last-of-type {
+                    position: relative;
+                    animation: arrowRight 3s infinite linear;
+                }
+            }
+            &.name {
+                @include font-custom(30px, 30px);
+                color: color(blue, 500);
+            }
+            &.divider {
+                color: #888888;
+                @include font-custom(30px, 30px);
+            }
+        }
+    }
+}
+
+.section-heading {
+    h2 {
+        color: color(blue, 500);
+        @include font-custom(44px, 50px);
+        @include bp(mobile) {
+            @include font-custom(34px, 40px);
+        }
+    }
+    p {
+        @include font-custom(20px, 26px);
+        color: transparentize(color(white, 100), .5);
+        @include bp(mobile) {
+            @include font-custom(16px, 22px);
+        }
+    }
+}
