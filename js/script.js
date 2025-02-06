@@ -5,6 +5,8 @@ $(document).ready(function(){
     // Kursor JS
     new kursor({
         type: 4,
+        color: "#1f7a8c",
+        removeDefaultCursor: true
     })
 
     /****************************************************/
@@ -32,12 +34,17 @@ $(document).ready(function(){
     requestAnimationFrame(raf);
     /****************************************************/
 
-    $(document).mousemove(function(event) {
-        let posX = event.clientX - $(window).width() / 2;
-        let posY = event.clientY - $(window).height() / 2;
-    
-        $("section.custom-banner-animation .first, section.custom-banner-animation .last").css("transform", "translateX(" + posX * 0.001 + "%)");
-        $("section.custom-banner-animation .main-img").css("transform", "translateX(" + -posX * 0.005 + "%)"); // Moves in the opposite direction
+
+    /****************************************************/
+    // Delegate hover events for dynamically loaded content
+    $(document).on('mouseenter', 'a, button', function() {
+        $('.kursor').addClass('hover-link');
+        $('.kursorChild').addClass('hover-link');
+    }).on('mouseleave', 'a, button', function() {
+        $('.kursor').removeClass('hover-link');
+        $('.kursorChild').removeClass('hover-link');
     });
+        
+    /****************************************************/
 
 });

@@ -4,7 +4,7 @@ header {
     top: 0;
     z-index: 999;
     padding: 30px 0;
-    transition: $transition-linear;
+    // transition: $transition-linear;
     background-color: transparent;
     backdrop-filter: blur(20px);
     .mobile-menu {
@@ -16,7 +16,7 @@ header {
                 right: 0;
                 width: 42px;
                 height: 42px;
-                background-color: transparentize(color(black, 900), .05);
+                background-color: transparentize(color(black, 100), .05);
                 border-radius: $round;
                 transform: scale(1);
                 opacity: 0;
@@ -26,19 +26,19 @@ header {
                 width: 42px;
                 height: 3px;
                 border-radius: $rounded;
-                background-color: color(white, 100);
+                background-color: color(theme, 1);
                 transform: translate(0, 0) rotate(0deg);
                 transition: $transition-smooth;
                 &:last-child {
                     width: 21px;
-                    background-color: color(blue, 500);
+                    background-color: color(black, 600);
                 }
             }
         }
         .whatsapp {
             i {
                 @include font-custom(28px, 28px);
-                color: color(blue, 500);
+                color: color(theme, 1);
             }
         }
         @include bp(tablet) {
@@ -80,7 +80,7 @@ header {
                         transform: translate(0, 0) rotate(0deg);
                         &:nth-child(1) {
                             transform: translate(0px, 12px) rotate(-38deg);
-                            background-color: color(blue, 500);
+                            background-color: color(white, 100);
                         }
                         &:nth-child(2) {
                             width: 0;
@@ -112,6 +112,20 @@ header {
                     }
                 }
             }
+        }
+    }
+}
+
+.opener {
+    .split-screen {
+        background: linear-gradient(to right, color(theme, 1), color(theme, 5));
+        width: 90vw;
+        transition: $transition-linear;
+        transform: skewX(-20deg) scale(1.5) translate(-10vw, 0);
+        transform-origin: center;
+        &:last-child {
+            background: linear-gradient(to left, color(theme, 1), color(theme, 5));
+            transform: skewX(-20deg) scale(1.5) translate(10vw, 0);
         }
     }
 }

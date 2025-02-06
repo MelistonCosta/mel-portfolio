@@ -8,7 +8,7 @@ footer {
         .contact {
             .icon {
                 background: color(white, 100);
-                color: color(black, 900);
+                color: color(black, 600);
                 border-radius: $round;
                 padding: 0;
                 @include font-custom(14px, 14px);
@@ -70,12 +70,12 @@ footer {
         }
     }
     .post-footer {
-        background: transparentize(color(black, 900), .6);
+        background: transparentize(color(black, 500), .6);
         backdrop-filter: blur(5px);
         p {
             @include font-custom(14px, 22px);
             i {
-                color: color(blue, 500);
+                color: color(white, 100);
             }
         }
     }
@@ -93,11 +93,11 @@ footer {
         left: auto;
         right: 0;
         bottom: -1px;
-        background-color: color(blue, 500);
+        background-color: color(white, 100);
         transition: $transition-smooth;
     }
     &:hover {
-        color: color(blue, 500);
+        color: color(white, 100);
         &::before {
             width: 100%;
             right: auto;
@@ -107,6 +107,6 @@ footer {
 }
 
 %footer-icon-hover {
-    background-color: color(blue, 500);
+    background-color: color(white, 100);
     color: color(white, 100);
 }
