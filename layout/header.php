@@ -55,8 +55,8 @@
 
 </head>
 <div class="opener position-fixed w-100 h-100 z-3 d-flex justify-content-between overflow-hidden">
-    <div class="split-screen h-100"></div>
-    <div class="split-screen h-100"></div>
+    <div class="split-screen left-screen h-100"></div>
+    <div class="split-screen right-screen h-100"></div>
 </div>
 <header class="position-fixed">
     <div class="container">

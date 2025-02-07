@@ -11,16 +11,22 @@ $(document).ready(function(){
 
     const tlPageLoad = gsap.timeline();
 
-    tlPageLoad.to(".opener .split-screen", {
-        width: 0,
-        duration: 1,
+    tlPageLoad.to(".opener .split-screen.left-screen", {
+        x: "-200%",
+        duration: 2,
+        delay: .5,
         ease: "sine.out",
     })
+    tlPageLoad.to(".opener .split-screen.right-screen", {
+        x: "200%",
+        duration: 2,
+        ease: "sine.out",
+    },"<")
     .to(".opener", {
         className: "d-none",
-    }, "+=1")
+    })
     .fromTo(".custom-banner-animation .first .char",{
-        x: "-100%",
+        x: "-500",
         opacity: 0,
         rotate: -15,
     }, {
@@ -32,7 +38,7 @@ $(document).ready(function(){
             amount: 0.3,
             from: "end",
         }
-    })
+    }, "-=1")
     .fromTo(".custom-banner-animation .last .char",{
         x: "100%",
         opacity: 0,

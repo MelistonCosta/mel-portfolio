@@ -118,13 +118,14 @@ header {
 
 .opener {
     .split-screen {
-        background: linear-gradient(to right, color(theme, 1), color(theme, 5));
+        background: linear-gradient(to left, color(theme, 1), color(theme, 5));
         width: 50vw;
-        transition: $transition-linear;
+        // transition: $transition-linear;
         transform: skewX(-20deg) scale(2) translate(-10vw, 0);
         transform-origin: center;
+        mix-blend-mode: lighten;
         &:last-child {
-            background: linear-gradient(to left, color(theme, 1), color(theme, 5));
+            background: linear-gradient(to right, color(theme, 1), color(theme, 5));
             transform: skewX(-20deg) scale(2) translate(10vw, 0);
         }
     }
