@@ -1,6 +1,11 @@
 $(document).ready(function(){
     
     /****************************************************/
+    // SplitType
+    const text = new SplitType(".custom-banner-animation .first, .custom-banner-animation .middle, .custom-banner-animation .last", { types: 'chars' });
+    /****************************************************/
+
+    /****************************************************/
     // GSAP
     gsap.registerPlugin(ScrollTrigger);
 
@@ -14,6 +19,34 @@ $(document).ready(function(){
     .to(".opener", {
         className: "d-none",
     }, "+=1")
+    .fromTo(".custom-banner-animation .first .char",{
+        x: "-100%",
+        opacity: 0,
+        rotate: -15,
+    }, {
+        x: "0%",
+        opacity: 1,
+        rotate: 0,
+        duration: 2,
+        stagger: {
+            amount: 0.3,
+            from: "end",
+        }
+    })
+    .fromTo(".custom-banner-animation .last .char",{
+        x: "100%",
+        opacity: 0,
+        rotate: 15,
+    }, {
+        x: "0%",
+        opacity: 1,
+        rotate: 0,
+        duration: 2,
+        stagger: {
+            amount: 0.3,
+            from: "start",
+        }
+    },"<")
     .fromTo("header", {
         opacity: 0,
         y: -100,
@@ -37,6 +70,60 @@ $(document).ready(function(){
 
 
     /****************************************************/
+    // Swiper JS
+    const textSwiper = new Swiper('.mySwiper.textSwiper', {
+        slidesPerView: "auto",
+        centeredSlides: true,
+        speed: 3000,
+        loop: true,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: false,
+            stopOnLastSlide: false,
+            reverseDirection: false
+        },
+        allowTouchMove: false, // Disable touch movement
+        keyboard: {
+            enabled: false,
+        },
+        mousewheel: {
+            enabled: false,
+        },
+        grabCursor: false,
+        loopedSlides: 10, // Adjust for smoother looping
+        watchSlidesProgress: true, // Helps prevent blank slides
+        watchSlidesVisibility: true, // Ensures slides stay visible
+    });
+
+    const textSwiper2 = new Swiper('.mySwiper.textSwiper2', {
+        slidesPerView: "auto",
+        centeredSlides: true,
+        speed: 3000,
+        loop: true,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: false,
+            stopOnLastSlide: false,
+            reverseDirection: false
+        },
+        allowTouchMove: false, // Disable touch movement
+        keyboard: {
+            enabled: false,
+        },
+        mousewheel: {
+            enabled: false,
+        },
+        grabCursor: false,
+        loopedSlides: 10, // Adjust for smoother looping
+        watchSlidesProgress: true, // Helps prevent blank slides
+        watchSlidesVisibility: true, // Ensures slides stay visible
+    });
+    /****************************************************/
+
+
+    /****************************************************/
     // Mouse Parallax
     $(document).mousemove(function(event) {
         let posX = event.clientX - $(window).width() / 2;
@@ -45,6 +132,20 @@ $(document).ready(function(){
         $("section.custom-banner-animation .first, section.custom-banner-animation .last").css("transform", "translateX(" + posX * 0.001 + "%)");
         $("section.custom-banner-animation .main-img").css("transform", "translateX(" + -posX * 0.005 + "%)");
     });
+    /****************************************************/
+
+    /****************************************************/
+    $(document).mousemove(function(event) {
+        var centerX = $(window).width() / 2;
+        var centerY = $(window).height() / 2;
+        var moveX = (event.clientX - centerX) / 30;
+        var moveY = (event.clientY - centerY) / 30;
+        
+        $(".parallax-box").css({
+            "transform": `perspective(500px) rotateY(${moveX}deg) rotateX(${-moveY}deg) translate(${moveX * 5}px, ${moveY * 5}px)`
+        });
+    });
+    
     /****************************************************/
 
 });

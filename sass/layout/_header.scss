@@ -119,13 +119,13 @@ header {
 .opener {
     .split-screen {
         background: linear-gradient(to right, color(theme, 1), color(theme, 5));
-        width: 90vw;
+        width: 50vw;
         transition: $transition-linear;
-        transform: skewX(-20deg) scale(1.5) translate(-10vw, 0);
+        transform: skewX(-20deg) scale(2) translate(-10vw, 0);
         transform-origin: center;
         &:last-child {
             background: linear-gradient(to left, color(theme, 1), color(theme, 5));
-            transform: skewX(-20deg) scale(1.5) translate(10vw, 0);
+            transform: skewX(-20deg) scale(2) translate(10vw, 0);
         }
     }
 }

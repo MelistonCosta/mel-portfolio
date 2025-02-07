@@ -7,32 +7,12 @@ body {
     position: relative;
     color: color(black, 100);
     background-color: color(theme, 5);
-    transition: $transition-smooth;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    &::before {
-        content: "";
-        background-image: url("../images/background/bg-8.jpg");
-        background-size: 100%;
-        background-repeat: repeat-y;
-        background-attachment: fixed;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        opacity: .5;
-        z-index: -1;
-        @include bp(tablet) {
-            opacity: 1;
-            background-image: url("../images/background/bg-9.jpg");
-            background-size: cover;
-        }
-    }
 	&::-webkit-scrollbar {
         display: none;
 	}

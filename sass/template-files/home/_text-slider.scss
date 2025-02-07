@@ -1,0 +1,35 @@
+section.home-text-slider {
+    .textSwiper {
+        background-color: color(theme, 5);
+        border-top: 2px double color(theme, 1);
+        border-bottom: 2px double color(theme, 1);
+        transform: rotate(-2deg);
+        .swiper-wrapper {
+            transition-timing-function: linear;
+            .swiper-slide {
+                width: auto;
+            }
+        }
+        .blocks {
+            span {
+                &.text {
+                    color: color(theme, 1);
+                    @include font-custom(25px, 25px);
+                    font-weight: 800;
+                }
+                &.icon {
+                    transform: rotate(0deg);
+                    animation: rotateMe 5s infinite linear reverse;
+                    transition: $transition-smooth;
+                    svg {
+                        width: 30px;
+                        height: 30px;
+                        fill: none;
+                        stroke: color(theme, 1);
+                        stroke-width: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
