@@ -28,7 +28,7 @@ $(document).ready(function(){
     .fromTo(".custom-banner-animation .first .char",{
         x: "-500",
         opacity: 0,
-        rotate: -15,
+        rotate: -20,
     }, {
         x: "0%",
         opacity: 1,
@@ -42,7 +42,7 @@ $(document).ready(function(){
     .fromTo(".custom-banner-animation .last .char",{
         x: "100%",
         opacity: 0,
-        rotate: 15,
+        rotate: 20,
     }, {
         x: "0%",
         opacity: 1,
