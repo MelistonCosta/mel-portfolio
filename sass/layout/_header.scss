@@ -3,10 +3,13 @@ header {
     right: 0;
     top: 0;
     z-index: 999;
-    padding: 30px 0;
     // transition: $transition-linear;
     background-color: transparent;
     backdrop-filter: blur(20px);
+    .border-box {
+        background-color: transparentize(color(theme, 1), .9);
+        border-radius: $rounded;
+    }
     .mobile-menu {
         .icon {
             &::before {

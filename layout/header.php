@@ -13,7 +13,7 @@
     <!-- Open Graph (OG) Meta Tags for Social Media -->
     <meta property="og:title" content="Meliston Costa | Expert Frontend Developer & UI/UX Specialist">
     <meta property="og:description" content="Explore my portfolio showcasing modern web development, UI/UX design, and WordPress customization expertise.">
-    <meta property="og:image" content="https://meliston.netlify.app/path-to-thumbnail.jpg">
+    <meta property="og:image" content="https://meliston.netlify.app/images/meliston.webp">
     <meta property="og:url" content="https://meliston.netlify.app/">
     <meta property="og:type" content="website">
 
@@ -21,7 +21,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Meliston Costa | Expert Frontend Developer & UI/UX Specialist">
     <meta name="twitter:description" content="Frontend development, UI/UX design, and WordPress expertise showcased in my portfolio.">
-    <meta name="twitter:image" content="https://meliston.netlify.app/path-to-thumbnail.jpg">
+    <meta name="twitter:image" content="https://meliston.netlify.app/images/meliston.webp">
 
     <!-- Canonical Tag (Helps with duplicate content issues) -->
     <link rel="canonical" href="https://meliston.netlify.app/">
@@ -58,41 +58,43 @@
     <div class="split-screen left-screen h-100"></div>
     <div class="split-screen right-screen h-100"></div>
 </div>
-<header class="position-fixed">
+<header class="position-fixed pt-3">
     <div class="container">
-        <div class="row justify-content-between flex-nowrap">
-            <div class="col-auto">
-                <div class="logo d-flex justify-content-center align-items-center">
-                    <a href="<?php echo $baseUrl ?>">
-                        <span class="arrow">&lt;</span>
-                        <span class="name text-uppercase"><span class="highlight">Me</span>liston</span>
-                        <span class="divider">/</span>
-                        <span class="arrow">&gt;</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-auto">
-                <div class="mobile-menu d-flex flex-row flex-nowrap gap-4 align-items-end">
-                    <div class="whatsapp d-dlex d-lg-none align-self-center position-relative z-1">
-                        <a href="https://wa.link/okeyyq" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-whatsapp"></i>
+        <div class="border-box p-2 p-lg-3">
+            <div class="row justify-content-between flex-nowrap align-items-center">
+                <div class="col-auto">
+                    <div class="logo d-flex justify-content-center align-items-center">
+                        <a href="<?php echo $baseUrl ?>">
+                            <span class="arrow">&lt;</span>
+                            <span class="name text-uppercase"><span class="highlight">Me</span>liston</span>
+                            <span class="divider">/</span>
+                            <span class="arrow">&gt;</span>
                         </a>
                     </div>
-                    <div class="icon position-relative d-flex flex-column align-items-end d-lg-none gap-2 align-self-center">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="navigation container d-flex flex-column flex-lg-row justify-content-between align-items-end align-items-lg-center gap-4 gap-lg-4 gap-xl-5 w-100">
-                        <ul class="nav d-flex flex-column flex-lg-row flex-wrap align-items-end align-items-lg-center gap-4 gap-lg-4 gap-xl-5">
-                            <li><a href="">About </a></li>
-                            <li><a href="">Experience</a></li>
-                            <li><a href="">Projects</a></li>
-                            <li><a href="">Skills</a></li>
-                            <li><a href="">Testimonials</a></li>
-                        </ul>
-                        <div class="btn-holder d-flex">
-                            <a class="button" href="">Contact</a>
+                </div>
+                <div class="col-auto">
+                    <div class="mobile-menu d-flex flex-row flex-nowrap gap-4 align-items-end">
+                        <div class="whatsapp d-dlex d-lg-none align-self-center position-relative z-1">
+                            <a href="https://wa.link/okeyyq" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </div>
+                        <div class="icon position-relative d-flex flex-column align-items-end d-lg-none gap-2 align-self-center">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="navigation container d-flex flex-column flex-lg-row justify-content-between align-items-end align-items-lg-center gap-4 gap-lg-4 gap-xl-5 w-100">
+                            <ul class="nav d-flex flex-column flex-lg-row flex-wrap align-items-end align-items-lg-center gap-4 gap-lg-4 gap-xl-5">
+                                <li><a href="">About </a></li>
+                                <li><a href="">Experience</a></li>
+                                <li><a href="">Projects</a></li>
+                                <li><a href="">Skills</a></li>
+                                <li><a href="">Testimonials</a></li>
+                            </ul>
+                            <div class="btn-holder d-flex">
+                                <a class="button" href="">Contact</a>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -8,9 +8,10 @@ section.custom-banner-animation {
     background-color: color(theme, 1);
     .first, .last {
         color: color(theme, 5);
-        font-family: $font-secondary;
+        font-family: $font-primary;
     }
     .middle {
+        font-family: $font-secondary;
         position: relative;
         z-index: 1;
         mix-blend-mode: hard-light;

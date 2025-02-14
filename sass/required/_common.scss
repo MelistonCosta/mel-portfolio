@@ -113,7 +113,7 @@ button, .button {
     &:hover {
         color: color(theme, 1);
         background-color: color(white, 100);
-        box-shadow: -9px -9px 0px -5px color(white, 100), 9px 9px 0px -5px color(white, 100);
+        // box-shadow: -9px -9px 0px -5px color(white, 100), 9px 9px 0px -5px color(white, 100);
         i {
             transform: translate(1px, -1px) scale(1.1);
         }
@@ -214,15 +214,15 @@ button, .button {
 
 .section-heading {
     h2 {
-        color: color(white, 100);
-        @include font-custom(44px, 50px);
+        color: color(black, 100);
+        @include font-custom(80px, 86px);
         @include bp(mobile) {
             @include font-custom(34px, 40px);
         }
     }
     p {
         @include font-custom(20px, 26px);
-        color: transparentize(color(white, 100), .5);
+        color: transparentize(color(black, 100), .5);
         @include bp(mobile) {
             @include font-custom(16px, 22px);
         }
