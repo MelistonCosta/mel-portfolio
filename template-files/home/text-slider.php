@@ -1,8 +1,3 @@
-<br>
-<br>
-<br>
-<br>
-<br>
 <section class="home-text-slider py-4 py-lg-5 py-xl-6 overflow-hidden">
     <div class="swiper mySwiper textSwiper">
         <div class="swiper-wrapper d-flex flex-row gap-4 m-0 py-2 py-lg-3">

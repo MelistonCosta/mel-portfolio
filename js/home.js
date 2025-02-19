@@ -17,7 +17,7 @@ $(document).ready(function(){
         delay: .5,
         ease: "sine.out",
     })
-    tlPageLoad.to(".opener .split-screen.right-screen", {
+    .to(".opener .split-screen.right-screen", {
         x: "200%",
         duration: 2,
         ease: "sine.out",
@@ -53,6 +53,20 @@ $(document).ready(function(){
             from: "start",
         }
     },"<")
+
+
+    const tlHomeBanner = gsap.timeline({
+        trigger: ".home-banner",
+    });
+
+    tlHomeBanner.to("section.custom-banner-animation", {
+        backgroundColor: "#FFFCF2",
+        duration: 1.5,
+    }, "<")
+    .to([".section.custom-banner-animation .first", "section.custom-banner-animation .last"], {
+        color: "#000000",
+        duration: 1.5,
+    }, "<")
     .fromTo("header", {
         opacity: 0,
         y: -100,
@@ -70,7 +84,25 @@ $(document).ready(function(){
         opacity: 1,
         stagger: .2,
         x: 0
-    }, "+=.5");
+    }, "+=.5")
+    .fromTo("section.home-banner .badge-content .rounded-badge", {
+        scale: .5,
+        opacity: 0,
+    }, {
+        scale: 1,
+        opacity: 1,
+        rotate: "360",
+        // duration: 1,
+    }, "<")
+    .fromTo("section.home-banner ul.stats-content li", {
+        scale: .5,
+        opacity: 0,
+    }, {
+        scale: 1,
+        opacity: 1,
+        // duration: 1,
+        stagger: .5,
+    }, "<")
 
     /****************************************************/
 
