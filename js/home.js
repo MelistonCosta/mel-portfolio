@@ -25,6 +25,16 @@ $(document).ready(function(){
     .to(".opener", {
         className: "d-none",
     })
+    .fromTo(".custom-banner-animation .middle .char",{
+        scale: .8,
+    }, {
+        scale: 1,
+        duration: 2.5,
+        stagger: {
+            amount: 0.35,
+            from: "center",
+        }
+    }, "<")
     .fromTo(".custom-banner-animation .first .char",{
         x: "-500",
         opacity: 0,
@@ -56,15 +66,22 @@ $(document).ready(function(){
 
 
     const tlHomeBanner = gsap.timeline({
-        trigger: ".home-banner",
+        scrollTrigger: {
+            trigger: ".home-banner",
+            // scrub: true,
+        }
     });
 
     tlHomeBanner.to("section.custom-banner-animation", {
         backgroundColor: "#FFFCF2",
         duration: 1.5,
     }, "<")
-    .to([".section.custom-banner-animation .first", "section.custom-banner-animation .last"], {
-        color: "#000000",
+    .to("section.home-banner", {
+        backgroundColor: "#FFFCF2",
+        duration: 1.5,
+    }, "<")
+    .to("section.custom-banner-animation .first, section.custom-banner-animation .last", {
+        color: "#1F7A8C",
         duration: 1.5,
     }, "<")
     .fromTo("header", {
@@ -85,23 +102,50 @@ $(document).ready(function(){
         stagger: .2,
         x: 0
     }, "+=.5")
-    .fromTo("section.home-banner .badge-content .rounded-badge", {
-        scale: .5,
-        opacity: 0,
+    
+    
+    const tlBannerBadge = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".home-banner .badge-content",
+            scrub: true,
+            start: "0% 100%",
+            end: "100% 0%",
+        }
+    });
+    
+    tlBannerBadge.fromTo("section.home-banner .badge-content .rounded-badge", {
+        rotate: "0",
     }, {
-        scale: 1,
-        opacity: 1,
         rotate: "360",
-        // duration: 1,
+        duration: 3,
+    })
+    .from("section.home-banner .badge-content .boxed-content",{
+        y: 60,
+        duration: 1,
     }, "<")
-    .fromTo("section.home-banner ul.stats-content li", {
+
+    const tlBannerCounter = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".home-banner .badge-content",
+            start: "0% 80%",
+            end: "100% 60%",
+        }
+    });
+
+    tlBannerCounter.fromTo("section.home-banner ul.stats-content li", {
         scale: .5,
         opacity: 0,
     }, {
         scale: 1,
         opacity: 1,
-        // duration: 1,
-        stagger: .5,
+        stagger: .1,
+    })
+    .fromTo("section.home-banner .image .btn-holder .button", {
+        minWidth: "0",
+    }, {
+        duration: 2,
+        minWidth: "350",
+        ease: "power3.out"
     }, "<")
 
     /****************************************************/
@@ -162,7 +206,7 @@ $(document).ready(function(){
 
 
     /****************************************************/
-    // Mouse Parallax
+    // Intro Mouse Parallax
     $(document).mousemove(function(event) {
         let posX = event.clientX - $(window).width() / 2;
         let posY = event.clientY - $(window).height() / 2;
@@ -171,6 +215,27 @@ $(document).ready(function(){
         $("section.custom-banner-animation .main-img").css("transform", "translateX(" + -posX * 0.005 + "%)");
     });
     /****************************************************/
+
+
+    /****************************************************/
+    // Projects Mouse Parallax
+    $('section.uneven-cards ul.uneven-card li').on('mousemove', function (event) {
+        let $image = $(this).find('.image');
+        let offset = $(this).offset();
+        let mouseX = event.pageX - offset.left;
+        let mouseY = event.pageY - offset.top;
+        
+        let moveX = (mouseX / $(this).width() - 0.5) * 100; // Adjust sensitivity
+        let moveY = (mouseY / $(this).height() - 0.5) * 100;
+
+        $image.css('transform', `translate(${moveX}px, ${moveY - 50}%) rotate(${moveX / 10}deg)`);
+    });
+
+    $('section.uneven-cards ul.uneven-card li').on('mouseleave', function () {
+        $(this).find('.image').css('transform', 'translate(0, -50%) rotate(-5deg)');
+    });
+    /****************************************************/
+
 
     /****************************************************/
     $(document).mousemove(function(event) {

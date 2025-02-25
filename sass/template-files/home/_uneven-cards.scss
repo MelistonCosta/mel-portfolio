@@ -1,0 +1,65 @@
+section.uneven-cards {
+    ul.uneven-card {
+        li {
+            border-bottom: 2px solid transparentize(color(black, 600), .8);
+            .blocks {
+                .image {
+                    width: 400px;
+                    height: 200px;
+                    left: 25%;
+                    top: 50%;
+                    transform: translate(0, -50%) rotate(-5deg);
+                    opacity: 0;
+                    pointer-events: none;
+                    // transition: $transition-linear;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: $rounded;
+                    }
+                }
+                .project-name {
+                    a {
+                        &::before {
+                            content: attr(data-value);
+                            position: absolute;
+                            left: 0;
+                            font-size: 80px;
+                            text-transform: uppercase;
+                            opacity: 0;
+                            font-weight: 800;
+                            top: 50%;
+                            transform: translate(-100%, -50%);
+                            transition: $transition-smooth;
+                        }
+                    }
+                }
+            }
+            &:hover {
+                .blocks {
+                    .image {
+                        opacity: 1;
+                    }
+                    .project-name {
+                        a {
+                            &::before {
+                                animation: projectName 40s infinite;
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-child(even) {
+                .blocks {
+                    .image {
+                        transform: translate(0, -50%) rotate(5deg);
+                    }
+                }
+            }
+            &:last-of-type {
+                border-bottom: none;
+            }
+        }
+    }
+}

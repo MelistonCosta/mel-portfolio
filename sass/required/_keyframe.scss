@@ -110,3 +110,20 @@
         transform: translate(0, 0);
     }
 }
+
+@keyframes projectName {
+    0% {
+        transform: translate(-100%, -50%);
+        opacity: 0;
+    }
+    10% {
+        opacity: .1;
+    }
+    90% {
+        opacity: .1;
+    }
+    100% {
+        transform: translate(200%, -50%);
+        opacity: 0;
+    }
+}
