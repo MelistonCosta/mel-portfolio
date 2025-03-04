@@ -1,8 +1,8 @@
 section.home-text-slider {
     .textSwiper {
         background-color: color(theme, 5);
-        border-top: 2px double color(theme, 1);
-        border-bottom: 2px double color(theme, 1);
+        // border-top: 2px double color(theme, 1);
+        // border-bottom: 2px double color(theme, 1);
         transform: rotate(-2deg);
         .swiper-wrapper {
             transition-timing-function: linear;
@@ -14,7 +14,7 @@ section.home-text-slider {
             span {
                 &.text {
                     color: color(theme, 1);
-                    @include font-custom(25px, 25px);
+                    @include font-custom(150px, 150px);
                     font-weight: 800;
                 }
                 &.icon {
@@ -22,11 +22,11 @@ section.home-text-slider {
                     animation: rotateMe 5s infinite linear reverse;
                     transition: $transition-smooth;
                     svg {
-                        width: 30px;
-                        height: 30px;
+                        width: 60px;
+                        height: 60px;
                         fill: none;
                         stroke: color(theme, 1);
-                        stroke-width: 30px;
+                        stroke-width: 25px;
                     }
                 }
             }

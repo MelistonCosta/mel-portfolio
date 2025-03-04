@@ -156,7 +156,7 @@ $(document).ready(function(){
     const textSwiper = new Swiper('.mySwiper.textSwiper', {
         slidesPerView: "auto",
         centeredSlides: true,
-        speed: 3000,
+        speed: 10000,
         loop: true,
         autoplay: {
             delay: 0,
@@ -254,6 +254,41 @@ $(document).ready(function(){
 
     /****************************************************/
     new CircleType($('.rounded-badge .content')[0]);
+    /****************************************************/
+
+    
+    /****************************************************/
+    // Counter Animation
+    function animateCounter(el) {
+        let finalValue = parseFloat($(el).text().replace(/,/g, ''));
+        $(el).prop('Counter', 0).animate({
+            Counter: finalValue
+        }, {
+            duration: 4500,
+            easing: 'swing',
+            step: function (now) {
+                if (finalValue % 1 !== 0) {
+                    $(this).text(now.toFixed(1).replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                } else {
+                    $(this).text(Math.floor(now).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                }
+            }
+        });
+    }
+
+    let observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    $('.counter .num').each(function() {
+        observer.observe(this);
+    });
+
     /****************************************************/
 
 });

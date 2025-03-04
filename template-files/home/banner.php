@@ -1,4 +1,4 @@
-<section class="home-banner py-4 py-lg-5 py-xl-6 position-relative">
+<section class="home-banner py-4 py-lg-5 py-xl-6 position-relative overflow-hidden">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-auto">

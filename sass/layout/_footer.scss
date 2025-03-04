@@ -1,6 +1,58 @@
 footer {
+    background-color: color(theme, 1);
     .border-box {
-        border: 2px dashed color(theme, 1);
+        // border: 2px dashed color(theme, 1);
         border-radius: $rounded;
+        background-color: transparentize(color(theme, 6), .5);
+        color: color(white, 100);
+    }
+    .post-footer {
+        .footer-name {
+            font-size: 12.5vw;
+            line-height: 1;
+            font-weight: 500;
+            font-family: $font-secondary;
+            background-image: linear-gradient(to bottom, transparentize(color(theme, 6), .5), color(theme, 1) 90%);
+            color: transparent;
+            background-clip: text;
+        }
+        p {
+            color: color(white, 100);
+            @include font-custom(12px, 14px);
+            strong {
+                color: color(theme, 4);
+            }
+        }
+        ul {
+            li {
+                a {
+                    color: color(white, 100);
+                    @include font-custom(12px, 14px);
+                    transition: $transition-smooth;
+                    strong {
+                        color: color(theme, 4);
+                    }
+                    &:hover {
+                        color: color(theme, 4);
+                    }
+                }
+            }
+        }
+        ul.follow-us {
+            li {
+                a {
+                    i {
+                        color: color(white, 100);
+                        @include font-custom(20px, 20px);
+                        transition: $transition-smooth;
+                    }
+                    &:hover {
+                        i {
+                            color: color(theme, 4);
+                        }
+                    }
+                }
+            }
+        }
     }
 }

@@ -162,12 +162,14 @@ button, .button {
 
 .kursor {
     border-width: 2px !important;
+    mix-blend-mode: difference;
     &.hover-link {
         opacity: 0;
     }
 }
 .kursorChild {
     // background: color(white, 100);
+    mix-blend-mode: difference;
     &.hover-link {
         opacity: 0.4;
         border-color: color(white, 100) !important;

@@ -5,7 +5,7 @@ $(document).ready(function(){
     // Kursor JS
     new kursor({
         type: 4,
-        color: "#1f7a8c",
+        color: "#FFFFFF",
         removeDefaultCursor: true
     })
 
@@ -17,9 +17,11 @@ $(document).ready(function(){
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         smoothWheel: true,
         smoothTouch: false,
-        direction: 'vertical'
+        // direction: 'vertical'
     });
     
+    lenis.start(); // Ensure Lenis starts
+
     // Listen for the scroll event
     lenis.on('scroll', (e) => {
         // console.log(e);
