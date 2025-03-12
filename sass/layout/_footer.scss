@@ -1,10 +1,12 @@
 footer {
     background-color: color(theme, 1);
     .border-box {
-        // border: 2px dashed color(theme, 1);
-        border-radius: $rounded;
+        border-radius: $rounded-more;
         background-color: transparentize(color(theme, 6), .5);
         color: color(white, 100);
+        @include bp(mobile) {
+            border-radius: $rounded;
+        }
     }
     .post-footer {
         .footer-name {

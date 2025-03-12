@@ -165,7 +165,7 @@ $(document).ready(function(){
             stopOnLastSlide: false,
             reverseDirection: false
         },
-        allowTouchMove: false, // Disable touch movement
+        allowTouchMove: false,
         keyboard: {
             enabled: false,
         },
@@ -173,34 +173,9 @@ $(document).ready(function(){
             enabled: false,
         },
         grabCursor: false,
-        loopedSlides: 10, // Adjust for smoother looping
-        watchSlidesProgress: true, // Helps prevent blank slides
-        watchSlidesVisibility: true, // Ensures slides stay visible
-    });
-
-    const textSwiper2 = new Swiper('.mySwiper.textSwiper2', {
-        slidesPerView: "auto",
-        centeredSlides: true,
-        speed: 3000,
-        loop: true,
-        autoplay: {
-            delay: 0,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: false,
-            stopOnLastSlide: false,
-            reverseDirection: false
-        },
-        allowTouchMove: false, // Disable touch movement
-        keyboard: {
-            enabled: false,
-        },
-        mousewheel: {
-            enabled: false,
-        },
-        grabCursor: false,
-        loopedSlides: 10, // Adjust for smoother looping
-        watchSlidesProgress: true, // Helps prevent blank slides
-        watchSlidesVisibility: true, // Ensures slides stay visible
+        loopedSlides: 10,
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true,
     });
     /****************************************************/
 
@@ -288,7 +263,24 @@ $(document).ready(function(){
     $('.counter .num').each(function() {
         observer.observe(this);
     });
+    /****************************************************/
 
+
+
+    /****************************************************/
+    // Testimonials Swiper
+    const testimonialsSwiper = new Swiper('.mySwiper.testimonialsSwiper', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        speed: 1200,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+        },
+        loopedSlides: 10,
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true,
+    });
     /****************************************************/
 
 });

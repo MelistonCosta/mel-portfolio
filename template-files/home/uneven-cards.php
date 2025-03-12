@@ -14,7 +14,8 @@
                     <li class="position-relative">
                         <div class="blocks d-flex flex-column flex-lg-row gap-3 gap-lg-4 py-3 py-lg-5">
                             <div class="image position-absolute z-3">
-                                <img src="<?php echo $baseUrl ?>/images/temp.webp" alt="" />
+                                <!-- <img src="<?php echo $baseUrl ?>/images/temp.webp" alt="" /> -->
+                                <img src="https://picsum.photos/400" alt="" />
                             </div>
                             <div class="row">
                                 <div class="col-12 col-lg-4 offset-lg-1">
@@ -33,7 +34,7 @@
                     <li class="position-relative">
                         <div class="blocks d-flex flex-column flex-lg-row gap-3 gap-lg-4 py-3 py-lg-5">
                             <div class="image position-absolute z-3">
-                                <img src="<?php echo $baseUrl ?>/images/temp-2.webp" alt="" />
+                                <img src="https://picsum.photos/400" alt="" />
                             </div>
                             <div class="row">
                                 <div class="col-12 col-lg-4 offset-lg-1">
@@ -52,7 +53,7 @@
                     <li class="position-relative">
                         <div class="blocks d-flex flex-column flex-lg-row gap-3 gap-lg-4 py-3 py-lg-5">
                             <div class="image position-absolute z-3">
-                                <img src="<?php echo $baseUrl ?>/images/temp.webp" alt="" />
+                                <img src="https://picsum.photos/400" alt="" />
                             </div>
                             <div class="row">
                                 <div class="col-12 col-lg-4 offset-lg-1">
@@ -71,7 +72,7 @@
                     <li class="position-relative">
                         <div class="blocks d-flex flex-column flex-lg-row gap-3 gap-lg-4 py-3 py-lg-5">
                             <div class="image position-absolute z-3">
-                                <img src="<?php echo $baseUrl ?>/images/temp-2.webp" alt="" />
+                                <img src="https://picsum.photos/400" alt="" />
                             </div>
                             <div class="row">
                                 <div class="col-12 col-lg-4 offset-lg-1">
