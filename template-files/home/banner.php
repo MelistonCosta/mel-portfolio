@@ -25,7 +25,7 @@
                 <div class="image position-relative">
                     <img src="<?php echo $baseUrl ?>/images/temp.webp" alt="" />
                     <div class="btn-holder d-flex justify-content-end position-absolute">
-                        <a href="#" class="button">Know More</a>
+                        <a href="<?php echo $baseUrl ?>/#contact" class="button">Lets Connect</a>
                     </div>
                 </div>
             </div>

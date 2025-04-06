@@ -12,9 +12,9 @@
 			$tmpURL = $tmpURL[0];
 		}
 		if ($tmpURL !== $_SERVER['HTTP_HOST'])
-			$base_url .= $_SERVER['HTTP_HOST'].'/'.$tmpURL.'/';
+			$base_url .= $_SERVER['HTTP_HOST'].'/'.$tmpURL;		//		=>.'/'
 		else
-			$base_url .= $tmpURL.'/';
+			$base_url .= $tmpURL;								//		=> .'/'
 		return $base_url; 
 	}
 	$baseUrl = home_base_url();

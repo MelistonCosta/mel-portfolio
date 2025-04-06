@@ -1,4 +1,4 @@
-<section class="uneven-cards py-4 py-lg-5 py-xl-6 overflow-hidden">
+<section class="uneven-cards py-4 py-lg-5 py-xl-6 overflow-hidden" id="projects">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-auto">

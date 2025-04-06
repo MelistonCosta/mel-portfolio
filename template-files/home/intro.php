@@ -7,6 +7,6 @@
     <div class="middle">Meliston</div>
     <div class="last">Developer</div>
     <div class="main-img">
-        <img loading="lazy" src="<?php echo $baseUrl ?>/images/model.webp" alt="" />
+        <img loading="lazy" src="<?php echo $baseUrl ?>/images/mel.png" alt="" />
     </div>
 </section>

@@ -82,14 +82,14 @@
                         </div>
                         <div class="navigation container d-flex flex-column flex-lg-row justify-content-between align-items-end align-items-lg-center gap-4 gap-lg-4 gap-xl-5 w-100">
                             <ul class="nav d-flex flex-column flex-lg-row flex-wrap align-items-end align-items-lg-center gap-4 gap-lg-4 gap-xl-5">
-                                <li><a href="">About </a></li>
-                                <li><a href="">Experience</a></li>
-                                <li><a href="">Projects</a></li>
-                                <li><a href="">Skills</a></li>
-                                <li><a href="">Testimonials</a></li>
+                                <li><a href="<?php echo $baseUrl ?>/#">About </a></li>
+                                <li><a href="<?php echo $baseUrl ?>/#">Experience</a></li>
+                                <li><a href="<?php echo $baseUrl ?>/#projects">Projects</a></li>
+                                <li><a href="<?php echo $baseUrl ?>/#">Skills</a></li>
+                                <li><a href="<?php echo $baseUrl ?>/#testimonials">Testimonials</a></li>
                             </ul>
                             <div class="btn-holder d-flex">
-                                <a class="button" href="">Contact</a>
+                                <a class="button" href="<?php echo $baseUrl ?>/#contact">Contact</a>
                             </div>
                         </div>
                     </div>

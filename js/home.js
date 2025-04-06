@@ -26,12 +26,12 @@ $(document).ready(function(){
         className: "d-none",
     })
     .fromTo(".custom-banner-animation .middle .char",{
-        scale: .8,
+        scale: .6,
     }, {
         scale: 1,
-        duration: 2.5,
+        duration: 2,
         stagger: {
-            amount: 0.35,
+            amount: 0.25,
             from: "center",
         }
     }, "<")
@@ -72,6 +72,9 @@ $(document).ready(function(){
         }
     });
 
+    tlHomeBanner.to("section.custom-banner-animation .main-img", {
+        filter: "grayscale(0)"
+    }, "<")
     tlHomeBanner.to("section.custom-banner-animation", {
         backgroundColor: "#FFFCF2",
         duration: 1.5,

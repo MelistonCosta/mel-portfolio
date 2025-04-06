@@ -3,6 +3,7 @@ section.testimonials {
         .swiper-wrapper {
         }
         .swiper-slide {
+            height: auto;
             &:nth-child(3n+1) {
                 .blocks {
                     background-color: transparentize(color(theme, 1), .8);
@@ -71,12 +72,30 @@ section.testimonials {
                 }
                 .image {
                     img {
+                        width: 50px;
+                        height: 50px;
+                        object-fit: cover;
                         border-radius: $round;
+                        filter: grayscale(1);
+                        transition: $transition-smooth;
                     }
                 }
                 .name-designation {
-                    .name {}
-                    .designation {}
+                    .name {
+                        @include font-custom(14px, 14px);
+                    }
+                    .designation {
+                        @include font-custom(12px, 12px);
+                    }
+                }
+            }
+            &:hover {
+                .author-profile {
+                    .image {
+                        img {
+                            filter: grayscale(0)
+                        }
+                    }
                 }
             }
         }

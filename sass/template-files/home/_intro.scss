@@ -28,6 +28,7 @@ section.custom-banner-animation {
         margin: 0 auto;
         max-width: 60vh;
         bottom: 0;
+        filter: grayscale(1);
         img {}
     }
 }
