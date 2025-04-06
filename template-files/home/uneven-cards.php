@@ -91,5 +91,12 @@
                 </ul>
             </div>
         </div>
+        <div class="row">
+            <div class="col">
+                <div class="pt-4 pt-lg-5 btn-holder d-flex justify-content-center">
+                    <a href="" class="button">View All Projects</a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>

@@ -1,4 +1,8 @@
 <section class="home-banner py-4 py-lg-5 py-xl-6 position-relative overflow-hidden">
+    <div class="rounded-badge-background-effect d-flex flex-column gap-3 gap-lg-4 align-items-center text-uppercase position-relative">
+        <div class="content">Creative &bull; Frontend &bull; Developer &bull;</div>
+        <div class="star-rotate"><i class="fa-solid fa-star-of-life p-2 p-lg-3"></i></div>
+    </div>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-auto">

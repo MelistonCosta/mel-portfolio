@@ -34,7 +34,7 @@ $(document).ready(function(){
             amount: 0.25,
             from: "center",
         }
-    }, "<")
+    }, "-=1.5")
     .fromTo(".custom-banner-animation .first .char",{
         x: "-500",
         opacity: 0,
@@ -231,7 +231,15 @@ $(document).ready(function(){
 
 
     /****************************************************/
-    new CircleType($('.rounded-badge .content')[0]);
+    // new CircleType($('.rounded-badge .content')[0]);
+    // new CircleType($('.rounded-badge-background-effect')[0]);
+    $('.rounded-badge .content').each(function () {
+        new CircleType(this);
+    });
+    
+    $('.rounded-badge-background-effect .content').each(function () {
+        new CircleType(this);
+    });
     /****************************************************/
 
     
