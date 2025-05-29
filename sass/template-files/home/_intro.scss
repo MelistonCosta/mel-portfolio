@@ -31,4 +31,27 @@ section.custom-banner-animation {
         filter: grayscale(1);
         img {}
     }
+    .work-tag {
+        background-color: color(white, 100);
+        position: absolute;
+        border-radius: 50px;
+        padding: 20px 40px;
+        left: 50%;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 4px;
+        bottom: 0;
+        text-transform: none;
+        transform: translate(-50%, 0);
+        border: 1px solid color(theme, 1);
+        .blink {
+            width: 10px;
+            height: 10px;
+            border-radius: $round;
+            background-color: color(theme, 1);
+        }
+        .tag {
+            color: color(black, 1);
+        }
+    }
 }

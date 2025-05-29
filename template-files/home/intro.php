@@ -9,4 +9,8 @@
     <div class="main-img">
         <img loading="lazy" src="<?php echo $baseUrl ?>/images/mel.png" alt="" />
     </div>
+    <div class="work-tag position-absolute d-flex justify-content-center align-items-center gap-2 gap-lg-3">
+        <div class="blink"></div>
+        <div class="tag">Available for work</div>
+    </div>
 </section>
