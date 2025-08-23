@@ -3,11 +3,11 @@ $(document).ready(function(){
     /****************************************************/
 
     // Kursor JS
-    new kursor({
-        type: 4,
-        color: "#FFFFFF",
-        removeDefaultCursor: true
-    })
+    // new kursor({
+    //     type: 4,
+    //     color: "#FFFFFF",
+    //     removeDefaultCursor: true
+    // })
 
     /****************************************************/
 

@@ -127,3 +127,18 @@
         opacity: 0;
     }
 }
+
+
+@keyframes rippleEffect {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    80% {
+        opacity: .6;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
