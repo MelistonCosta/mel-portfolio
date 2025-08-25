@@ -1,5 +1,23 @@
 section.home-banner {
     background-color: color(theme, 1);
+    .sticky-badge {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, 0px) scale(3.5);
+        opacity: .05;
+        .rounded-badge-background-effect {
+            .content {
+                font-weight: 900;
+            }
+            .star-rotate {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) !important;
+            }
+        }
+    }
     .badge-content {
         .rounded-badge {
             border-radius: $round;

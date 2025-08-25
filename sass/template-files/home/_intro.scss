@@ -44,6 +44,7 @@ section.custom-banner-animation {
         text-transform: none;
         transform: translate(-50%, 0);
         border: 1px solid color(theme, 1);
+        width: max-content;
         .blink {
             width: 10px;
             height: 10px;

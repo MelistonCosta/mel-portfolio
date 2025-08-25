@@ -116,7 +116,7 @@ jQuery(document).ready(function($) {
         }
     });
     
-    tlBannerBadge.fromTo("section.home-banner .badge-content .rounded-badge", {
+    tlBannerBadge.fromTo("section.home-banner .rounded-badge-background-effect, section.home-banner .rounded-badge-background-effect .star-rotate, section.home-banner .badge-content .rounded-badge", {
         rotate: "0",
     }, {
         rotate: "360",
@@ -291,6 +291,17 @@ jQuery(document).ready(function($) {
         loopedSlides: 10,
         watchSlidesProgress: true,
         watchSlidesVisibility: true,
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1200: {
+                slidesPerView: 3,
+            },
+        }
     });
     /****************************************************/
 
