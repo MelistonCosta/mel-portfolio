@@ -21,7 +21,16 @@ section.home-banner {
     .badge-content {
         .rounded-badge {
             border-radius: $round;
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(3px);
+            width: 170px;
+            height: 170px;
+            background: transparentize(color(theme, 1), .9);
+            @include bp(mobile) {
+                width: 195px;
+                height: 195px;
+                display: table !important;
+                padding: 15px;
+            }
             .content {
                 font-family: $font-secondary;
                 span {
@@ -46,6 +55,14 @@ section.home-banner {
             border: 20px solid color(theme, 5);
             background-color: color(theme, 5);
             border-radius: 0 $rounded-more 0 0;
+            @include bp(desktop-sm) {
+                margin-right: 0;
+                border-left: none;
+            }
+            @include bp(desktop-sm) {
+                border-bottom: none;
+                border-right: none;
+            }
             &::before, &::after {
                 content: "";
                 position: absolute;
@@ -70,8 +87,15 @@ section.home-banner {
     }
     .image {
         margin-left: -50px;
+        @include bp(desktop-sm) {
+            margin-left: 0;
+        }
         img {
             border-radius: $rounded-more;
+            object-fit: cover;
+            @include bp(mobile) {
+                border-radius: $rounded-less;
+            }
         }
         .btn-holder {
             right: 0;
@@ -86,15 +110,29 @@ section.home-banner {
                 border-bottom-right-radius: $rounded-more;
                 background-color: transparent;
                 box-shadow: 10px 10px 0 10px color(theme, 5);
+                @include bp(mobile) {
+                    height: 30px;
+                    width: 30px;
+                    box-shadow: 5px 10px 0 5px color(theme, 5);
+                    left: -44px;
+                    border-bottom-right-radius: $rounded-less;
+                }
             }
             &::after {
                 right: 0;
                 top: -50px;
                 left: auto;
+                @include bp(mobile) {
+                    top: -45px;
+                }
             }
             .button {
                 outline: 20px solid color(theme, 5);
                 min-width: 350px;
+                @include bp(mobile) {
+                    outline: 15px solid color(theme, 5);
+                    min-width: 200px;
+                }
             }
         }
     }
@@ -106,8 +144,12 @@ section.home-banner {
                     span {
                         @include font-custom(60px, 60px);
                         font-weight: 600;
+                        font-family: $font-secondary;
                         &:last-of-type {
                             @include font-custom(30px, 30px);
+                        }
+                        @include bp(mobile) {
+                            @include font-custom(40px, 40px);
                         }
                     }
                 }

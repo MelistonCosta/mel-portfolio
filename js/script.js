@@ -48,5 +48,21 @@ jQuery(document).ready(function($) {
     });
         
     /****************************************************/
+    
+
+    /****************************************************/
+    // Mobile Menu
+    if (window.matchMedia('(max-width: 991px)').matches) {
+        $("header .mobile-menu .icon").click(function(){
+            $(this).parent().toggleClass("active");
+        });
+        $("header .mobile-menu a").click(function(){
+            $(this).parents(".mobile-menu").removeClass("active");
+        })
+
+    } else {
+
+    }
+    /****************************************************/
 
 });

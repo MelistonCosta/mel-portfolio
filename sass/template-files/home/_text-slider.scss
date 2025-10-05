@@ -13,9 +13,16 @@ section.home-text-slider {
         .blocks {
             span {
                 &.text {
+                    font-family: $font-secondary;
                     color: color(theme, 1);
                     @include font-custom(150px, 150px);
                     font-weight: 800;
+                    @include bp(tablet) {
+                        @include font-custom(100px, 100px);
+                    }
+                    @include bp(mobile) {
+                        @include font-custom(50px, 50px);
+                    }
                 }
                 &.icon {
                     transform: rotate(0deg);

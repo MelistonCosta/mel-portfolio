@@ -19,14 +19,15 @@ header {
                 right: 0;
                 width: 42px;
                 height: 42px;
-                background-color: transparentize(color(black, 100), .05);
+                // background-color: transparentize(color(black, 100), .05);
+                background-color: transparentize(color(theme, 1), .05);
                 border-radius: $round;
                 transform: scale(1);
                 opacity: 0;
                 transition: $transition-smooth;
             }
             span {
-                width: 42px;
+                width: 30px;
                 height: 3px;
                 border-radius: $rounded;
                 background-color: color(theme, 1);
@@ -60,11 +61,21 @@ header {
                         transition: $transition-smooth;
                         a {
                             @include font-custom(20px, 20px);
+                            color: color(black, 100);
+                            @include bp(tablet) {
+                                color: color(white, 100);
+                            }
                         }
                     }
                 }
                 .btn-holder {
                     @include hide-block;
+                    @include bp(tablet) {
+                        a.button {
+                            background: color(white, 100);
+                            color: color(theme, 1);
+                        }
+                    }
                 }
             }
         }
@@ -82,16 +93,18 @@ header {
                     span {
                         transform: translate(0, 0) rotate(0deg);
                         &:nth-child(1) {
-                            transform: translate(0px, 12px) rotate(-38deg);
+                            transform: translate(0px, 8px) rotate(-42deg);
                             background-color: color(white, 100);
                         }
                         &:nth-child(2) {
                             width: 0;
-                            transform: translate(-20px, 0);
+                            margin: 0 auto;
+                            // transform: translate(-20px, 0);
                         }
                         &:nth-child(3) {
-                            transform: translate(0, -9px) rotate(38deg);
-                            width: 42px;
+                            transform: translate(0, -6px) rotate(42deg);
+                            width: 30px;
+                            background-color: color(white, 100);
                         }
                     }
                 }

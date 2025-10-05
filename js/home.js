@@ -142,15 +142,26 @@ jQuery(document).ready(function($) {
         scale: 1,
         opacity: 1,
         stagger: .1,
-    })
-    .fromTo("section.home-banner .image .btn-holder .button", {
-        minWidth: "0",
-    }, {
-        duration: 2,
-        minWidth: "350",
-        ease: "power3.out"
-    }, "<")
+    });
 
+    if (window.matchMedia('(max-width: 767px)').matches) {
+        tlBannerCounter.fromTo("section.home-banner .image .btn-holder .button", {
+            minWidth: "0",
+        }, {
+            duration: 2,
+            minWidth: "200",
+            ease: "power3.out"
+        }, "<")
+
+    } else {
+        tlBannerCounter.fromTo("section.home-banner .image .btn-holder .button", {
+            minWidth: "0",
+        }, {
+            duration: 2,
+            minWidth: "350",
+            ease: "power3.out"
+        }, "<")
+    }
     /****************************************************/
 
 
@@ -197,21 +208,25 @@ jQuery(document).ready(function($) {
 
     /****************************************************/
     // Projects Mouse Parallax
-    $('section.uneven-cards ul.uneven-card li').on('mousemove', function (event) {
-        let $image = $(this).find('.image');
-        let offset = $(this).offset();
-        let mouseX = event.pageX - offset.left;
-        let mouseY = event.pageY - offset.top;
-        
-        let moveX = (mouseX / $(this).width() - 0.5) * 100; // Adjust sensitivity
-        let moveY = (mouseY / $(this).height() - 0.5) * 100;
+    if (window.matchMedia('(max-width: 991px)').matches) {
 
-        $image.css('transform', `translate(${moveX}px, ${moveY - 50}%) rotate(${moveX / 10}deg)`);
-    });
-
-    $('section.uneven-cards ul.uneven-card li').on('mouseleave', function () {
-        $(this).find('.image').css('transform', 'translate(0, -50%) rotate(-5deg)');
-    });
+    } else {
+        $('section.uneven-cards ul.uneven-card li').on('mousemove', function (event) {
+            let $image = $(this).find('.image');
+            let offset = $(this).offset();
+            let mouseX = event.pageX - offset.left;
+            let mouseY = event.pageY - offset.top;
+            
+            let moveX = (mouseX / $(this).width() - 0.5) * 100; // Adjust sensitivity
+            let moveY = (mouseY / $(this).height() - 0.5) * 100;
+    
+            $image.css('transform', `translate(${moveX}px, ${moveY - 50}%) rotate(${moveX / 10}deg)`);
+        });
+    
+        $('section.uneven-cards ul.uneven-card li').on('mouseleave', function () {
+            $(this).find('.image').css('transform', 'translate(0, -50%) rotate(-5deg)');
+        });
+    }
     /****************************************************/
 
 

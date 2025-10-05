@@ -1,6 +1,6 @@
 @mixin bp($breakpoint) {
     @if $breakpoint ==desktop-sm {
-        @media (max-width: 1199x) {
+        @media (max-width: 1199px) {
             @content;
         }
     }
