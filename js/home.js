@@ -300,9 +300,9 @@ jQuery(document).ready(function($) {
         spaceBetween: 30,
         speed: 1200,
         loop: true,
-        autoplay: {
-            delay: 3000,
-        },
+        // autoplay: {
+        //     delay: 3000,
+        // },
         loopedSlides: 10,
         watchSlidesProgress: true,
         watchSlidesVisibility: true,

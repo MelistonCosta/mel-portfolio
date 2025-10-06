@@ -30,6 +30,10 @@ section.uneven-cards {
                 }
                 .project-name {
                     a {
+                        font-family: $font-secondary;
+                        @include font-custom(22px, 26px);
+                        font-weight: 800;
+                        color: color(theme, 1);
                         &::before {
                             content: attr(data-value);
                             position: absolute;
@@ -43,6 +47,16 @@ section.uneven-cards {
                             transform: translate(-100%, -50%);
                             transition: $transition-smooth;
                         }
+                    }
+                }
+                .tags {
+                    .tag {
+                        background-color: transparentize(color(theme, 1), .2);
+                        padding: 6px 20px;
+                        border-radius: $rounded-more;
+                        color: color(white, 100);
+                        text-transform: uppercase;
+                        @include font-custom(14px, 14px);
                     }
                 }
             }

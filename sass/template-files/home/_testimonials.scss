@@ -23,12 +23,16 @@ section.testimonials {
         .blocks {
             border-radius: $rounded-more;
             transition: $transition-linear;
-            @include bp(mobile) {
-                border-radius: $rounded;
+            @include bp(tablet) {
+                border-radius: $rounded-less;
             }
             .description {
                 @include font-custom(22px, 28px);
                 position: relative;
+                @include bp(tablet) {
+                    @include font-custom(16px, 24px);
+                    padding: 12px 0px 12px 22px;
+                }
                 &::before {
                     content: "\275D";
                     position: absolute;
@@ -47,8 +51,8 @@ section.testimonials {
                 background: color(theme, 5);
                 padding: 10px 10px 0 0;
                 border-radius: 0 $rounded-more 0 0;
-                @include bp(mobile) {
-                    border-radius: 0 $rounded 0 0;
+                @include bp(tablet) {
+                    border-radius: 0 $rounded-less 0 0;
                 }
                 &::before, &:after {
                     content: "";
@@ -60,6 +64,9 @@ section.testimonials {
                     background-color: transparent;
                     border-radius: 0 0 0 $rounded-more;
                     box-shadow: -10px 10px 0 10px color(theme, 5);
+                    @include bp(tablet) {
+                        border-radius: 0 0 0 $rounded-less;
+                    }
                 }
                 &::after {
                     margin-left: -3.5px;
@@ -69,6 +76,10 @@ section.testimonials {
                     bottom: 0;
                     border-radius: 0 0 0 $rounded-more;
                     box-shadow: -10px 10px 0 10px color(theme, 5);
+                    @include bp(tablet) {
+                        margin-left: .5px;
+                        border-radius: 0 0 0 $rounded-less;
+                    }
                 }
                 .image {
                     img {
@@ -86,6 +97,9 @@ section.testimonials {
                     }
                     .designation {
                         @include font-custom(12px, 12px);
+                        @include bp(tablet) {
+                            max-width: 150px;
+                        }
                     }
                 }
             }
