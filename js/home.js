@@ -300,9 +300,14 @@ jQuery(document).ready(function($) {
         spaceBetween: 30,
         speed: 1200,
         loop: true,
-        // autoplay: {
-        //     delay: 3000,
-        // },
+        autoplay: {
+            delay: 3000,
+        },
+        pagination: {
+            el: ".testimonialsPage",
+            dynamicBullets: true,
+            clickable: true,
+        },
         loopedSlides: 10,
         watchSlidesProgress: true,
         watchSlidesVisibility: true,
@@ -319,5 +324,136 @@ jQuery(document).ready(function($) {
         }
     });
     /****************************************************/
+
+
+
+    /****************************************************/
+    // Lottie animation - Contact
+    var animation = lottie.loadAnimation({
+        container: document.getElementById('form-animation'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: './lottie/form-animation.json'
+    });
+
+    /****************************************************/
+    
+    
+    
+    
+    /****************************************************/
+    // Email validation function
+    function validateEmail(email) {
+        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+
+    // Phone validation function
+    function validatePhone(phone) {
+        var re = /^[0-9]{10}$/;
+        return re.test(phone);
+    }
+
+    // Full Name
+    $('#full_name').on('input', function () {
+        this.value = this.value.replace(/[^a-zA-Z\s]/g, ''); // removes numbers & special characters
+    });
+
+    // Email validation on input
+    $('#email').on('input', function() {
+        var email = $(this).val();
+        var isValid = true;
+        if (email === '') {
+            isValid = false;
+        } else if (!validateEmail(email)) {
+            isValid = false;
+        }
+    });
+
+    // Phone validation on input
+    $('#phone').on('input', function() {
+        var phone = $(this).val();
+        var isValid = true;
+        if (phone === '') {
+            isValid = false;
+        } else if (!validatePhone(phone)) {
+            isValid = false;
+        }
+        // Remove any non-digit characters
+        this.value = this.value.replace(/[^0-9]/g, '');
+        // Limit the input to a maximum of 10 digits
+        if (this.value.length > 10) {
+            this.value = this.value.slice(0, 10);
+        }
+    });
+    /****************************************************/
+
+
+    /****************************************************/
+    $(document).keydown(function(event) {
+        // if ($('section.contact').hasClass('active')) {
+        // }
+        // else {
+        //     // Disable the 'i' key
+        //     if (event.key === 'i') {
+        //         event.preventDefault();
+        //     }
+        //     // Disable the 'Shift' key
+        //     if (event.shiftKey) {
+        //         event.preventDefault();
+        //     }
+        //     // Disable the 'Ctrl' key
+        //     if (event.ctrlKey) {
+        //         event.preventDefault();
+        //     }
+        // }
+    });
+
+    emailjs.init({
+        publicKey: "SQvyVoG-nXUcGGPXg",
+    });
+
+    $('form#contact-form').on('submit', function(event) {
+        $("span.formName").text($("input#full_name").val());
+        $("span.formPhoneNum").text($("input#phone").val());
+        $("span.formEmailID").text($("input#email_id").val());
+        event.preventDefault();
+        const formData = {
+            full_name: $('#full_name').val(),
+            company: $('#company').val(),
+            email_id: $('#email_id').val(),
+            phone: $('#phone').val(),
+            message: $('#message').val()
+        };
+        emailjs.send('service_fs5tgip', 'template_2wwoiuh', formData)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                $('form#contact-form').addClass("d-none");
+                $('.thank-you').removeClass("d-none").addClass("d-flex");
+                setTimeout(function () {
+                    $('.thank-you').addClass("animate-me");
+                }, 500);
+                // $('form#contact-form')[0].reset();
+                // $("section.contact").removeClass("active");
+                // $("html").removeAttr("style");
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
+    });
+
+    /****************************************************/
+
+
+    
+
+    /****************************************************/
+    // Web Security
+    $(document).on('contextmenu', function(event) {
+        event.preventDefault();
+    });
+
+    /****************************************************/
+
 
 });

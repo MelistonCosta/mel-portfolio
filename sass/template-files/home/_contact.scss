@@ -1,0 +1,163 @@
+section.contact {
+    .contact-info {
+        position: relative;
+        border-radius: $rounded-less;
+        // background: transparentize(color(black, 100), .5);
+        background: color(theme, 1);
+        backdrop-filter: blur(4px);
+        @include bp(mobile) {
+            border-radius: $rounded;
+        }
+        #form-animation {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            z-index: -1;
+            opacity: .2;
+        }
+        .cards {
+            @include bp(mobile) {
+                padding: 12px 0;
+            }
+            .icon {
+                background: color(white, 100);
+                color: color(theme, 1);
+                border-radius: $round;
+                padding: 0;
+                @include font-custom(20px, 20px);
+                width: 50px;
+                height: 50px;
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: center;
+                transition: $transition-smooth;
+            }
+            .content {
+                @include para-font;
+                color: color(white, 100);
+            }
+        }
+        ul.personal-details {
+            li {
+                .blocks {
+                    .icon {
+
+                    }
+                    .content {
+                        a {
+                            transition: $transition-smooth;
+                            &:hover {
+                                color: color(theme, 6);
+                            }
+                        }
+                    }
+                    &:hover {
+                        .icon {
+                            background-color: transparentize(color(theme, 6), .5);
+                            color: color(white, 100);
+                        }
+                    }
+                }
+            }
+        }
+        ul.follow-details {
+            li {
+                .icon {
+                    &:hover {
+                        background-color: transparentize(color(theme, 6), .5);
+                        color: color(white, 100);
+                    }
+                }
+            }
+        }
+    }
+    .form {
+        border-radius: $rounded-more;
+        // background: transparentize(color(black, 100), .5);
+        background: transparentize(color(theme, 2), .5);
+        backdrop-filter: blur(4px);
+        @include bp(mobile) {
+            border-radius: $rounded;
+        }
+        form {
+            padding: 12px 10px;
+            @include bp(mobile) {
+                padding: 24px 0;
+            }
+            fieldset {
+                label {
+                    @include para-font;
+                    font-weight: 600;
+                }
+                input {
+                    background: transparent;
+                    border: none;
+                    border-bottom: 1px solid color(black, 100);
+                    resize: none;
+                    width: 100%;
+                    color: color(black, 100);
+                    outline: none;
+                    padding: 0;
+                    transition: $transition-smooth;
+                    @include font-custom(18px, 22px);
+                    font-weight: 400;
+                    &::-webkit-inner-spin-button,
+                    &::-webkit-outer-spin-button {
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                        margin: 0;
+                    }
+                    &:focus {
+                        border-color: color(theme, 1);
+                    }
+                }
+                .btn-holder {
+
+                }
+            }
+        }
+        .thank-you {
+            svg {
+                position: relative;
+                top: 40px;
+                opacity: 0;
+                transition: $transition-smooth;
+                path {
+                    fill: color(theme, 1);
+                }
+            }
+            h2 {
+                position: relative;
+                top: 40px;
+                opacity: 0;
+                transition: $transition-smooth;
+                color: color(black, 100);
+            }
+            p {
+                position: relative;
+                top: 40px;
+                opacity: 0;
+                transition: $transition-smooth;
+            }
+            &.animate-me {
+                svg {
+                    top: 0;
+                    opacity: 1;
+                }
+                h2 {
+                    top: 0;
+                    opacity: 1;
+                    transition-delay: .2s;
+                }
+                p {
+                    top: 0;
+                    opacity: 1;
+                    transition-delay: .4s;
+                }
+            }
+        }
+    }
+}

@@ -127,11 +127,11 @@ button, .button {
     .swiper-pagination {
         position: relative;
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         left: 0 !important;
         right: auto;
         transform: translate(0px) !important;
-        gap: 6px;
+        gap: 4px;
         min-width: 250px;
         width: auto !important;
         bottom: 0;
@@ -142,19 +142,19 @@ button, .button {
             // padding-bottom: 40px;
         }
         span.swiper-pagination-bullet {
-            width: 15px;
+            width: 10px;
             margin: 0;
             transform: scale(1);
             height: 8px;
             border-radius: $rounded;
             left: auto !important;
             opacity: 1;
-            background-color: transparentize(color(white, 100), .5);
+            background-color: transparentize(color(theme, 1), .5);
             backdrop-filter: blur(4px);
             transition: $transition-smooth;
             &.swiper-pagination-bullet-active-main {
-                width: 50px;
-                background-color: transparentize(color(white, 100), .10);
+                width: 25px;
+                background-color: transparentize(color(theme, 1), 0);
             }
         }
     }
