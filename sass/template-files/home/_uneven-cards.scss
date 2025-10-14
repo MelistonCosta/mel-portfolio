@@ -6,7 +6,8 @@ section.uneven-cards {
                 .image {
                     position: absolute;
                     width: 400px;
-                    height: 200px;
+                    height: 300px;
+                    border-radius: $rounded;
                     left: 25%;
                     top: 50%;
                     transform: translate(0, -50%) rotate(-5deg);
@@ -22,10 +23,10 @@ section.uneven-cards {
                         transform: none;
                     }
                     img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        border-radius: $rounded;
+                        // width: 100%;
+                        // height: 100%;
+                        // object-fit: cover;
+                        transform: translate(0%, 0%);
                     }
                 }
                 .project-name {
@@ -64,6 +65,9 @@ section.uneven-cards {
                 .blocks {
                     .image {
                         opacity: 1;
+                        img {
+                            animation: scrollWebsite 25s infinite alternate linear;
+                        }
                     }
                     .project-name {
                         a {

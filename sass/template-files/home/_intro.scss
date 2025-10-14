@@ -33,6 +33,7 @@ section.custom-banner-animation {
         max-width: 60vh;
         bottom: 0;
         filter: grayscale(1);
+        transition: $transition-smooth;
         img {}
     }
     .work-tag {
