@@ -1,0 +1,56 @@
+section.page-not-found {
+    .image-content {
+        h1 {
+            font-size: 25vw;
+            line-height: 25vw;
+            color: color(theme, 1);
+            @include bp(tablet) {
+                font-size: 35vw;
+                line-height: 35vw;
+            }
+            @include bp(mobile-sm) {
+                font-size: 50vw;
+                line-height: 60vw;
+            }
+        }
+        span {
+            font-size: 2vw;
+            line-height: 3vw;
+            z-index: -1;
+            color: transparentize(color(black, 500), .5);
+            @include bp(tablet) {
+                @include font-custom(24px, 32px);
+            }
+            @include bp(mobile-sm) {
+                display: none;
+            }
+        }
+        .image {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 0);
+            max-width: 18vw;
+            @include bp(tablet) {
+                max-width: 28vw;
+            }
+            @include bp(mobile-sm) {
+                max-width: 40vw;
+            }
+            img {}
+        }
+    }
+    .border-tag {
+        border-top: 2px solid color(black, 600);
+        h2 {
+            color: color(theme, 1);
+        }
+        p {
+            @include font-custom(24px, 32px);
+            color: transparentize(color(black, 100), .5);
+            @include bp(mobile-sm) {
+                @include font-custom(18px, 24px);
+            }
+        }
+    }
+}
