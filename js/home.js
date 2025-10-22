@@ -507,7 +507,7 @@ jQuery(document).ready(function($) {
     const headerHeight = $('header').outerHeight() || 0;
 
     if (hash === '#contact' && $('#contact').length) {
-        $('html, body').animate({
+        $('html, body').animate({ 
             scrollTop: $('#contact').offset().top - headerHeight
         }, 700, 'swing');
     }
