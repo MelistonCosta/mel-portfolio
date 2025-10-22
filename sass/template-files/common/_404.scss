@@ -14,13 +14,9 @@ section.page-not-found {
             }
         }
         span {
-            font-size: 2vw;
-            line-height: 3vw;
             z-index: -1;
-            color: transparentize(color(black, 500), .5);
-            @include bp(tablet) {
-                @include font-custom(24px, 32px);
-            }
+            @include font-custom(24px, 32px);
+            color: transparentize(color(black, 100), .5);
             @include bp(mobile-sm) {
                 display: none;
             }

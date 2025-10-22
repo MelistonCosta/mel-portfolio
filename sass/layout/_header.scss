@@ -45,6 +45,30 @@ header {
                 color: color(theme, 1);
             }
         }
+        .navigation {
+            ul.nav {
+                li {
+                    a {
+                        position: relative;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: 0;
+                            height: 2px;
+                            background: color(black, 100);
+                            bottom: -5px;
+                            border-radius: 10px;
+                            transition: $transition-smooth;
+                        }
+                        &.active {
+                            &::before {
+                                width: 38px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         @include bp(tablet) {
             .navigation {
                 position: absolute;
@@ -64,6 +88,12 @@ header {
                             color: color(black, 100);
                             @include bp(tablet) {
                                 color: color(white, 100);
+                            }
+                            &::before {
+                                left: auto;
+                                right: 0;
+                                bottom: 0;
+                                background-color: color(white, 100);
                             }
                         }
                     }

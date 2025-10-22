@@ -39,7 +39,7 @@ section.uneven-cards {
                             content: attr(data-value);
                             position: absolute;
                             left: 0;
-                            font-size: 80px;
+                            @include font-custom(80px, 86px);
                             letter-spacing: 5px;
                             text-transform: uppercase;
                             opacity: 0;
@@ -47,17 +47,37 @@ section.uneven-cards {
                             top: 50%;
                             transform: translate(-100%, -50%);
                             transition: $transition-smooth;
+                            @include bp(mobile) {
+                                @include font-custom(40px, 46px);
+                                top: 352px;
+                                white-space: nowrap;
+                            }
                         }
                     }
                 }
                 .tags {
                     .tag {
-                        background-color: transparentize(color(theme, 1), .2);
-                        padding: 6px 20px;
+                        color: color(black, 200);
+                        background-color: color(white, 200);
+                        // background-color: transparentize(color(white, 200), .5);
+                        @include font-custom(12px, 12px);
+                        font-weight: 800;
+                        padding: 8px 16px;
                         border-radius: $rounded-more;
-                        color: color(white, 100);
                         text-transform: uppercase;
-                        @include font-custom(14px, 14px);
+                    }
+                }
+                .technology {
+                    filter: grayscale(1) drop-shadow(0px 0px 0px color(black, 400));
+                    transition: $transition-smooth;
+                    .icon {
+                        img {
+                            max-height: 30px;
+                            max-width: 60px;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
                     }
                 }
             }
@@ -76,18 +96,21 @@ section.uneven-cards {
                             }
                         }
                     }
-                }
-            }
-            &:nth-child(even) {
-                .blocks {
-                    .image {
-                        transform: translate(0, -50%) rotate(5deg);
-                        @include bp(tablet) {
-                            transform: none;
-                        }
+                    .technology {
+                        filter: grayscale(0) drop-shadow(2px 4px 8px color(black, 400));
                     }
                 }
             }
+            // &:nth-child(even) {
+            //     .blocks {
+            //         .image {
+            //             transform: translate(0, -50%) rotate(5deg);
+            //             @include bp(tablet) {
+            //                 transform: none;
+            //             }
+            //         }
+            //     }
+            // }
             &:last-of-type {
                 border-bottom: none;
             }

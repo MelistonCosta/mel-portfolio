@@ -40,6 +40,17 @@ footer {
                     &:hover {
                         color: color(theme, 4);
                     }
+                    &.active {
+                        color: color(theme, 4);
+                    }
+                }
+                span {
+                    color: color(white, 300);
+                }
+                &:last-child {
+                    span {
+                        display: none;
+                    }
                 }
             }
         }

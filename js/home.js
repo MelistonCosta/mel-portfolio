@@ -291,6 +291,37 @@ jQuery(document).ready(function($) {
     });
     /****************************************************/
 
+    /****************************************************/
+    // Skills Swiper
+    const skillsSwiper = new Swiper('.mySwiper.skillsSwiper', {
+        slidesPerView: "auto",
+        spaceBetween: 50,
+        speed: 2000,
+        loop: true,
+        autoplay: {
+            delay: 0,
+        },
+        // pagination: {
+        //     el: ".testimonialsPage",
+        //     dynamicBullets: true,
+        //     clickable: true,
+        // },
+        // loopedSlides: 10,
+        // watchSlidesProgress: true,
+        // watchSlidesVisibility: true,
+        breakpoints: {
+            320: {
+                spaceBetween: 15,
+            },
+            768: {
+                spaceBetween: 25,
+            },
+            1200: {
+                spaceBetween: 50,
+            },
+        }
+    });
+    /****************************************************/
 
 
     /****************************************************/
@@ -445,15 +476,61 @@ jQuery(document).ready(function($) {
     /****************************************************/
 
 
-    
-
     /****************************************************/
     // Web Security
     $(document).on('contextmenu', function(event) {
         event.preventDefault();
     });
+    /****************************************************/
+    
 
     /****************************************************/
+    // Scroll to contact
+    $('.scrollToContact').on('click', function(e) {
+        e.preventDefault();
+        
+        const headerHeight = $('header').outerHeight() || 0; // Adjust for fixed header
+        const target = $('#contact');
+        
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top - headerHeight
+            }, 700, 'swing');
+        }
+    });
+    /****************************************************/
+    
+    
+    /****************************************************/
+    // If URL matches:
+    const hash = window.location.hash;
+    const headerHeight = $('header').outerHeight() || 0;
 
+    if (hash === '#contact' && $('#contact').length) {
+        $('html, body').animate({
+            scrollTop: $('#contact').offset().top - headerHeight
+        }, 700, 'swing');
+    }
+    else if (hash === '#about' && $('#about').length) {
+        $('html, body').animate({
+            scrollTop: $('section#about').offset().top - headerHeight
+        }, 700, 'swing');
+    }
+    else if (hash === '#projects' && $('#projects').length) {
+        $('html, body').animate({
+            scrollTop: $('section#projects').offset().top - headerHeight
+        }, 700, 'swing');
+    }
+    else if (hash === '#skills' && $('#skills').length) {
+        $('html, body').animate({
+            scrollTop: $('section#skills').offset().top - headerHeight
+        }, 700, 'swing');
+    }
+    else if (hash === '#testimonials' && $('#testimonials').length) {
+        $('html, body').animate({
+            scrollTop: $('section#testimonials').offset().top - headerHeight
+        }, 700, 'swing');
+    }
+    /****************************************************/
 
 });

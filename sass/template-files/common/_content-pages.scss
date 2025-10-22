@@ -1,4 +1,10 @@
 section.content-page {
+    .intro-section {
+        background-image: url("../images/bg-texture.jpg");
+        background-color: color(theme, 5);
+        background-size: 35%;
+        background-blend-mode: multiply;
+    }
     h1 {
         color: color(theme, 1);
         font-weight: 800;

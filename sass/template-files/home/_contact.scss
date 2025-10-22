@@ -1,7 +1,11 @@
 section.contact {
+    background-image: url("../images/bg-texture.jpg");
+    background-color: color(theme, 5);
+    background-size: 35%;
+    background-blend-mode: multiply;
     .contact-info {
         position: relative;
-        border-radius: $rounded-less;
+        border-radius: $rounded-more;
         // background: transparentize(color(black, 100), .5);
         background: color(theme, 1);
         backdrop-filter: blur(4px);

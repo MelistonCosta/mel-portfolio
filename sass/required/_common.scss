@@ -22,11 +22,13 @@ body {
 }
 
 main {
-    padding-top: 90px;
-    position: relative;
-    z-index: 1;
-    @include bp(tablet) {
+    &.content-main {
         padding-top: 90px;
+        position: relative;
+        z-index: 1;
+        @include bp(tablet) {
+            padding-top: 90px;
+        }
     }
 }
 
