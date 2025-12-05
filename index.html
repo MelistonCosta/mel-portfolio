@@ -81,7 +81,7 @@
                     <div class="col-auto">
                         <div class="mobile-menu d-flex flex-row flex-nowrap gap-4 align-items-end">
                             <div class="whatsapp d-dlex d-lg-none align-self-center position-relative">
-                                <a href="https://wa.link/okeyyq" target="_blank" rel="noopener noreferrer">
+                                <a href="https://wa.link/okeyyq" target="_blank" rel="noopener noreferrer" aria-label="Visit Meliston on Whatsapp">
                                     <i class="fa-brands fa-whatsapp"></i>
                                 </a>
                             </div>
@@ -121,7 +121,12 @@
             <div class="middle">Meliston</div>
             <div class="last">Developer</div>
             <div class="main-img">
-                <img fetchpriority=high src="images/mel.webp" alt="Meliston Costa, Creative & Digital Frontend Developer portrait or illustrative banner" />
+                <picture>
+                    <source media="(min-width: 768px)" srcset="images/mel-d.webp">
+                    <source media="(max-width: 767px)" srcset="images/mel-m.webp">
+                    <img fetchpriority="high" src="images/mel-d.webp" alt="Meliston Costa, Creative & Digital Frontend Developer portrait or illustrative banner" >
+                </picture>
+                <!-- <img fetchpriority="high" src="images/mel.webp" alt="Meliston Costa, Creative & Digital Frontend Developer portrait or illustrative banner" /> -->
                 <!-- loading="lazy"  -->
             </div>
             <div class="work-tag position-absolute d-flex justify-content-center align-items-center gap-3">
@@ -141,7 +146,6 @@
                     <div class="star-rotate"><i class="fa-solid fa-star-of-life"></i></div>
                     <!--  p-2 p-lg-3 -->
                 </div>
-            </div>
             </div>
             <div class="container">
                 <div class="row justify-content-center">
@@ -167,7 +171,7 @@
                     </div>
                     <div class="col-12 col-lg-12 col-xl-7 order-2 order-lg-2 order-xl-1">
                         <div class="image position-relative h-100">
-                            <img fetchpriority=high class="h-100" src="images/temp.webp" alt="Meliston Costa, Creative & Digital Frontend Developer portrait or illustrative banner" />
+                            <img fetchpriority="high" class="h-100" src="images/featured.webp" alt="Meliston Costa, Creative & Digital Frontend Developer portrait or illustrative banner" />
                             <div class="btn-holder d-flex justify-content-end position-absolute">
                                 <a href="#contact" class="button scrollToContact">Lets Connect</a>
                             </div>
@@ -336,7 +340,7 @@
                                 <div class="blocks d-flex flex-column flex-lg-row gap-3 gap-lg-4 py-4 py-lg-5">
                                     <div class="image z-3 overflow-hidden">
                                         <a href="https://thedesignceo.in/" target="_blank" rel="noopener noreferrer" class="d-flex" aria-label="The Design CEO">
-                                            <img fetchpriority=high src="images/projects/adithya-murthy.webp" class="d-flex" alt="Meliston - The Design CEO - Freelance" />
+                                            <img fetchpriority="high" src="images/projects/adithya-murthy.webp" class="d-flex" alt="Meliston - The Design CEO - Freelance" />
                                         </a>
                                     </div>
                                     <div class="row row-gap-3">
@@ -357,25 +361,25 @@
                                             </div>
                                             <div class="technology d-flex flex-row flex-wrap gap-3 gap-lg-4 justify-content-start">
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/html5.svg" alt="HtML 5" />
+                                                    <img fetchpriority="high" src="images/icons/html5.svg" alt="HtML 5" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/css3.svg" alt="CSS 3" />
+                                                    <img fetchpriority="high" src="images/icons/css3.svg" alt="CSS 3" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/jquery.svg" alt="JQuery" />
+                                                    <img fetchpriority="high" src="images/icons/jquery.svg" alt="JQuery" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/sass.svg" alt="SASS" />
+                                                    <img fetchpriority="high" src="images/icons/sass.svg" alt="SASS" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/php.svg" alt="PHP" />
+                                                    <img fetchpriority="high" src="images/icons/php.svg" alt="PHP" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/wordpress.svg" alt="Wordpress" />
+                                                    <img fetchpriority="high" src="images/icons/wordpress.svg" alt="Wordpress" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/gsap.svg" alt="GSAP" />
+                                                    <img fetchpriority="high" src="images/icons/gsap.svg" alt="GSAP" />
                                                 </div>
                                             </div>
                                         </div>
@@ -386,7 +390,7 @@
                                 <div class="blocks d-flex flex-column flex-lg-row gap-3 gap-lg-4 py-4 py-lg-5">
                                     <div class="image z-3 overflow-hidden">
                                         <a href="https://carrental.gt.tc/" target="_blank" rel="noopener noreferrer" class="d-flex" aria-label="Goa Car Rentals">
-                                            <img fetchpriority=high src="images/projects/goicarrentals.webp" class="d-flex" alt="Meliston - Goa Car Rentals - Freelance" />
+                                            <img fetchpriority="high" src="images/projects/goicarrentals.webp" class="d-flex" alt="Meliston - Goa Car Rentals - Freelance" />
                                         </a>
                                     </div>
                                     <div class="row row-gap-3">
@@ -407,25 +411,25 @@
                                             </div>
                                             <div class="technology d-flex flex-row flex-wrap gap-3 gap-lg-4 justify-content-start">
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/html5.svg" alt="HtML 5" />
+                                                    <img fetchpriority="high" src="images/icons/html5.svg" alt="HtML 5" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/css3.svg" alt="CSS 3" />
+                                                    <img fetchpriority="high" src="images/icons/css3.svg" alt="CSS 3" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/jquery.svg" alt="JQuery" />
+                                                    <img fetchpriority="high" src="images/icons/jquery.svg" alt="JQuery" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/sass.svg" alt="SASS" />
+                                                    <img fetchpriority="high" src="images/icons/sass.svg" alt="SASS" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/php.svg" alt="PHP" />
+                                                    <img fetchpriority="high" src="images/icons/php.svg" alt="PHP" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/wordpress.svg" alt="Wordpress" />
+                                                    <img fetchpriority="high" src="images/icons/wordpress.svg" alt="Wordpress" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/gsap.svg" alt="GSAP" />
+                                                    <img fetchpriority="high" src="images/icons/gsap.svg" alt="GSAP" />
                                                 </div>
                                             </div>
                                         </div>
@@ -436,7 +440,7 @@
                                 <div class="blocks d-flex flex-column flex-lg-row gap-3 gap-lg-4 py-4 py-lg-5">
                                     <div class="image z-3 overflow-hidden">
                                         <a href="https://gayatrihonawarkar.webflow.io/" target="_blank" rel="noopener noreferrer" class="d-flex" aria-label="Gayatri Honawarkar">
-                                            <img fetchpriority=high src="images/projects/gayatri-honawarkar.webp" class="d-flex" alt="Meliston - Gayatri Honawarkar - Freelance" />
+                                            <img fetchpriority="high" src="images/projects/gayatri-honawarkar.webp" class="d-flex" alt="Meliston - Gayatri Honawarkar - Freelance" />
                                         </a>
                                     </div>
                                     <div class="row row-gap-3">
@@ -457,7 +461,7 @@
                                             </div>
                                             <div class="technology d-flex flex-row flex-wrap gap-3 gap-lg-4 justify-content-start">
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/webflow.svg" alt="WebFlow" />
+                                                    <img fetchpriority="high" src="images/icons/webflow.svg" alt="WebFlow" />
                                                 </div>
                                             </div>
                                         </div>
@@ -468,7 +472,7 @@
                                 <div class="blocks d-flex flex-column flex-lg-row gap-3 gap-lg-4 py-4 py-lg-5">
                                     <div class="image z-3 overflow-hidden">
                                         <a href="https://carrental.gt.tc/" target="_blank" rel="noopener noreferrer" class="d-flex" aria-label="The Design CEO">
-                                            <img fetchpriority=high src="images/projects/lti.webp" class="d-flex" alt="Meliston - The Design CEO - Freelance" />
+                                            <img fetchpriority="high" src="images/projects/lti.webp" class="d-flex" alt="Meliston - The Design CEO - Freelance" />
                                         </a>
                                     </div>
                                     <div class="row row-gap-3">
@@ -494,7 +498,7 @@
                                 <div class="blocks d-flex flex-column flex-lg-row gap-3 gap-lg-4 py-4 py-lg-5">
                                     <div class="image z-3 overflow-hidden">
                                         <a href="https://www.dmifinance.in/" target="_blank" rel="noopener noreferrer" class="d-flex" aria-label="DMI Finance">
-                                            <img fetchpriority=high src="images/projects/dmi-finance.webp" alt="Meliston - DMI Finance website ScreenRoot" />
+                                            <img fetchpriority="high" src="images/projects/dmi-finance.webp" alt="Meliston - DMI Finance website ScreenRoot" />
                                         </a>
                                     </div>
                                     <div class="row row-gap-3">
@@ -515,25 +519,25 @@
                                             </div>
                                             <div class="technology d-flex flex-row flex-wrap gap-3 gap-lg-4 justify-content-start">
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/html5.svg" alt="HtML 5" />
+                                                    <img fetchpriority="high" src="images/icons/html5.svg" alt="HtML 5" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/css3.svg" alt="CSS 3" />
+                                                    <img fetchpriority="high" src="images/icons/css3.svg" alt="CSS 3" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/jquery.svg" alt="JQuery" />
+                                                    <img fetchpriority="high" src="images/icons/jquery.svg" alt="JQuery" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/sass.svg" alt="SASS" />
+                                                    <img fetchpriority="high" src="images/icons/sass.svg" alt="SASS" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/php.svg" alt="PHP" />
+                                                    <img fetchpriority="high" src="images/icons/php.svg" alt="PHP" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/wordpress.svg" alt="Wordpress" />
+                                                    <img fetchpriority="high" src="images/icons/wordpress.svg" alt="Wordpress" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/gsap.svg" alt="GSAP" />
+                                                    <img fetchpriority="high" src="images/icons/gsap.svg" alt="GSAP" />
                                                 </div>
                                             </div>
                                         </div>
@@ -544,7 +548,7 @@
                                 <div class="blocks d-flex flex-column flex-lg-row gap-3 gap-lg-4 py-4 py-lg-5">
                                     <div class="image z-3 overflow-hidden">
                                         <a href="https://www.yesbank.in/" target="_blank" rel="noopener noreferrer" class="d-flex" aria-label="Yes Bank">
-                                            <img fetchpriority=high src="images/projects/yes-bank.webp" alt="Meliston - Yes Bank project ScreenRoot" />
+                                            <img fetchpriority="high" src="images/projects/yes-bank.webp" alt="Meliston - Yes Bank project ScreenRoot" />
                                         </a>
                                     </div>
                                     <div class="row row-gap-3">
@@ -565,22 +569,22 @@
                                             </div>
                                             <div class="technology d-flex flex-row flex-wrap gap-3 gap-lg-4 justify-content-start">
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/html5.svg" alt="HtML 5" />
+                                                    <img fetchpriority="high" src="images/icons/html5.svg" alt="HtML 5" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/css3.svg" alt="CSS 3" />
+                                                    <img fetchpriority="high" src="images/icons/css3.svg" alt="CSS 3" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/jquery.svg" alt="JQuery" />
+                                                    <img fetchpriority="high" src="images/icons/jquery.svg" alt="JQuery" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/sass.svg" alt="SASS" />
+                                                    <img fetchpriority="high" src="images/icons/sass.svg" alt="SASS" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/php.svg" alt="PHP" />
+                                                    <img fetchpriority="high" src="images/icons/php.svg" alt="PHP" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/gsap.svg" alt="GSAP" />
+                                                    <img fetchpriority="high" src="images/icons/gsap.svg" alt="GSAP" />
                                                 </div>
                                             </div>
                                         </div>
@@ -591,7 +595,7 @@
                                 <div class="blocks d-flex flex-column flex-lg-row gap-3 gap-lg-4 py-4 py-lg-5">
                                     <div class="image z-3 overflow-hidden">
                                         <a href="https://screenroot.com/" target="_blank" rel="noopener noreferrer" class="d-flex" aria-label="ScreenRoot">
-                                            <img fetchpriority=high src="images/projects/screenroot.webp" alt="Meliston - ScreenRoot UX design project ScreenRoot" />
+                                            <img fetchpriority="high" src="images/projects/screenroot.webp" alt="Meliston - ScreenRoot UX design project ScreenRoot" />
                                         </a>
                                     </div>
                                     <div class="row row-gap-3">
@@ -612,25 +616,25 @@
                                             </div>
                                             <div class="technology d-flex flex-row flex-wrap gap-3 gap-lg-4 justify-content-start">
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/html5.svg" alt="HtML 5" />
+                                                    <img fetchpriority="high" src="images/icons/html5.svg" alt="HtML 5" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/css3.svg" alt="CSS 3" />
+                                                    <img fetchpriority="high" src="images/icons/css3.svg" alt="CSS 3" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/jquery.svg" alt="JQuery" />
+                                                    <img fetchpriority="high" src="images/icons/jquery.svg" alt="JQuery" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/sass.svg" alt="SASS" />
+                                                    <img fetchpriority="high" src="images/icons/sass.svg" alt="SASS" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/php.svg" alt="PHP" />
+                                                    <img fetchpriority="high" src="images/icons/php.svg" alt="PHP" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/wordpress.svg" alt="Wordpress" />
+                                                    <img fetchpriority="high" src="images/icons/wordpress.svg" alt="Wordpress" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/gsap.svg" alt="GSAP" />
+                                                    <img fetchpriority="high" src="images/icons/gsap.svg" alt="GSAP" />
                                                 </div>
                                             </div>
                                         </div>
@@ -641,7 +645,7 @@
                                 <div class="blocks d-flex flex-column flex-lg-row gap-3 gap-lg-4 py-4 py-lg-5">
                                     <div class="image z-3 overflow-hidden">
                                         <a href="https://www.polisetty.com/" target="_blank" rel="noopener noreferrer" class="d-flex" aria-label="Polisetty">
-                                            <img fetchpriority=high src="images/projects/polisetty.webp" alt="Meliston - Polisetty project ScreenRoot" />
+                                            <img fetchpriority="high" src="images/projects/polisetty.webp" alt="Meliston - Polisetty project ScreenRoot" />
                                         </a>
                                     </div>
                                     <div class="row row-gap-3">
@@ -663,25 +667,25 @@
                                             </div>
                                             <div class="technology d-flex flex-row flex-wrap gap-3 gap-lg-4 justify-content-start">
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/html5.svg" alt="HtML 5" />
+                                                    <img fetchpriority="high" src="images/icons/html5.svg" alt="HtML 5" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/css3.svg" alt="CSS 3" />
+                                                    <img fetchpriority="high" src="images/icons/css3.svg" alt="CSS 3" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/jquery.svg" alt="JQuery" />
+                                                    <img fetchpriority="high" src="images/icons/jquery.svg" alt="JQuery" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/sass.svg" alt="SASS" />
+                                                    <img fetchpriority="high" src="images/icons/sass.svg" alt="SASS" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/php.svg" alt="PHP" />
+                                                    <img fetchpriority="high" src="images/icons/php.svg" alt="PHP" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/wordpress.svg" alt="Wordpress" />
+                                                    <img fetchpriority="high" src="images/icons/wordpress.svg" alt="Wordpress" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/gsap.svg" alt="GSAP" />
+                                                    <img fetchpriority="high" src="images/icons/gsap.svg" alt="GSAP" />
                                                 </div>
                                             </div>
                                         </div>
@@ -692,7 +696,7 @@
                                 <div class="blocks d-flex flex-column flex-lg-row gap-3 gap-lg-4 py-4 py-lg-5">
                                     <div class="image z-3 overflow-hidden">
                                         <a href="https://bluedartaviation.com/" target="_blank" rel="noopener noreferrer" class="d-flex" aria-label="Blue Dart Aviation">
-                                            <img fetchpriority=high src="images/projects/bluedart-aviation.webp" alt="Meliston - Blue Dart Aviation website ScreenRoot" />
+                                            <img fetchpriority="high" src="images/projects/bluedart-aviation.webp" alt="Meliston - Blue Dart Aviation website ScreenRoot" />
                                         </a>
                                     </div>
                                     <div class="row row-gap-3">
@@ -714,25 +718,25 @@
                                             </div>
                                             <div class="technology d-flex flex-row flex-wrap gap-3 gap-lg-4 justify-content-start">
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/html5.svg" alt="HtML 5" />
+                                                    <img fetchpriority="high" src="images/icons/html5.svg" alt="HtML 5" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/css3.svg" alt="CSS 3" />
+                                                    <img fetchpriority="high" src="images/icons/css3.svg" alt="CSS 3" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/jquery.svg" alt="JQuery" />
+                                                    <img fetchpriority="high" src="images/icons/jquery.svg" alt="JQuery" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/sass.svg" alt="SASS" />
+                                                    <img fetchpriority="high" src="images/icons/sass.svg" alt="SASS" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/php.svg" alt="PHP" />
+                                                    <img fetchpriority="high" src="images/icons/php.svg" alt="PHP" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/wordpress.svg" alt="Wordpress" />
+                                                    <img fetchpriority="high" src="images/icons/wordpress.svg" alt="Wordpress" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/gsap.svg" alt="GSAP" />
+                                                    <img fetchpriority="high" src="images/icons/gsap.svg" alt="GSAP" />
                                                 </div>
                                             </div>
                                         </div>
@@ -743,7 +747,7 @@
                                 <div class="blocks d-flex flex-column flex-lg-row gap-3 gap-lg-4 py-4 py-lg-5">
                                     <div class="image z-3 overflow-hidden">
                                         <a href="https://suzlon.com/microsites/2023-24/" target="_blank" rel="noopener noreferrer" class="d-flex" aria-label="Suzlon Energy AR 23-24">
-                                            <img fetchpriority=high src="images/projects/suzlon-energy-annual-report-23-24.webp" alt="Meliston - Suzlon 2023-24 microsite ScreenRoot" />
+                                            <img fetchpriority="high" src="images/projects/suzlon-energy-annual-report-23-24.webp" alt="Meliston - Suzlon 2023-24 microsite ScreenRoot" />
                                         </a>
                                     </div>
                                     <div class="row row-gap-3">
@@ -766,22 +770,22 @@
                                             </div>
                                             <div class="technology d-flex flex-row flex-wrap gap-3 gap-lg-4 justify-content-start">
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/html5.svg" alt="HtML 5" />
+                                                    <img fetchpriority="high" src="images/icons/html5.svg" alt="HtML 5" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/css3.svg" alt="CSS 3" />
+                                                    <img fetchpriority="high" src="images/icons/css3.svg" alt="CSS 3" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/jquery.svg" alt="JQuery" />
+                                                    <img fetchpriority="high" src="images/icons/jquery.svg" alt="JQuery" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/sass.svg" alt="SASS" />
+                                                    <img fetchpriority="high" src="images/icons/sass.svg" alt="SASS" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/php.svg" alt="PHP" />
+                                                    <img fetchpriority="high" src="images/icons/php.svg" alt="PHP" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/pdf.svg" alt="PDF" />
+                                                    <img fetchpriority="high" src="images/icons/pdf.svg" alt="PDF" />
                                                 </div>
                                             </div>
                                         </div>
@@ -792,7 +796,7 @@
                                 <div class="blocks d-flex flex-column flex-lg-row gap-3 gap-lg-4 py-4 py-lg-5">
                                     <div class="image z-3 overflow-hidden">
                                         <a href="https://www.jindalstainless.com/annualreport/2023-2024/" target="_blank" rel="noopener noreferrer" class="d-flex" aria-label="Jindal Stainless Annual Report 2023–24">
-                                            <img fetchpriority=high src="images/projects/jindal-annual-report-23-24.webp" alt="Meliston - Jindal Stainless Annual Report 2023–24 microsite ScreenRoot" />
+                                            <img fetchpriority="high" src="images/projects/jindal-annual-report-23-24.webp" alt="Meliston - Jindal Stainless Annual Report 2023–24 microsite ScreenRoot" />
                                         </a>
                                     </div>
                                     <div class="row row-gap-3">
@@ -814,22 +818,22 @@
                                             </div>
                                             <div class="technology d-flex flex-row flex-wrap gap-3 gap-lg-4 justify-content-start">
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/html5.svg" alt="HtML 5" />
+                                                    <img fetchpriority="high" src="images/icons/html5.svg" alt="HtML 5" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/css3.svg" alt="CSS 3" />
+                                                    <img fetchpriority="high" src="images/icons/css3.svg" alt="CSS 3" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/jquery.svg" alt="JQuery" />
+                                                    <img fetchpriority="high" src="images/icons/jquery.svg" alt="JQuery" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/sass.svg" alt="SASS" />
+                                                    <img fetchpriority="high" src="images/icons/sass.svg" alt="SASS" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/php.svg" alt="PHP" />
+                                                    <img fetchpriority="high" src="images/icons/php.svg" alt="PHP" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/pdf.svg" alt="PDF" />
+                                                    <img fetchpriority="high" src="images/icons/pdf.svg" alt="PDF" />
                                                 </div>
                                             </div>
                                         </div>
@@ -840,7 +844,7 @@
                                 <div class="blocks d-flex flex-column flex-lg-row gap-3 gap-lg-4 py-4 py-lg-5">
                                     <div class="image z-3 overflow-hidden">
                                         <a href="synapse.co" target="_blank" rel="noopener noreferrer" class="d-flex" aria-label="Synapse">
-                                            <img fetchpriority=high src="images/projects/synapse.webp" alt="Meliston - Synapse design agency site ScreenRoot" />
+                                            <img fetchpriority="high" src="images/projects/synapse.webp" alt="Meliston - Synapse design agency site ScreenRoot" />
                                         </a>
                                     </div>
                                     <div class="row row-gap-3">
@@ -861,25 +865,25 @@
                                             </div>
                                             <div class="technology d-flex flex-row flex-wrap gap-3 gap-lg-4 justify-content-start">
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/html5.svg" alt="HtML 5" />
+                                                    <img fetchpriority="high" src="images/icons/html5.svg" alt="HtML 5" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/css3.svg" alt="CSS 3" />
+                                                    <img fetchpriority="high" src="images/icons/css3.svg" alt="CSS 3" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/jquery.svg" alt="JQuery" />
+                                                    <img fetchpriority="high" src="images/icons/jquery.svg" alt="JQuery" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/sass.svg" alt="SASS" />
+                                                    <img fetchpriority="high" src="images/icons/sass.svg" alt="SASS" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/php.svg" alt="PHP" />
+                                                    <img fetchpriority="high" src="images/icons/php.svg" alt="PHP" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/wordpress.svg" alt="Wordpress" />
+                                                    <img fetchpriority="high" src="images/icons/wordpress.svg" alt="Wordpress" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/gsap.svg" alt="GSAP" />
+                                                    <img fetchpriority="high" src="images/icons/gsap.svg" alt="GSAP" />
                                                 </div>
                                             </div>
                                         </div>
@@ -890,7 +894,7 @@
                                 <div class="blocks d-flex flex-column flex-lg-row gap-3 gap-lg-4 py-4 py-lg-5">
                                     <div class="image z-3 overflow-hidden">
                                         <a href="synapse.co" target="_blank" rel="noopener noreferrer" class="d-flex" aria-label="Albersan">
-                                            <img fetchpriority=high src="images/projects/albersan.webp" alt="Meliston - Albersan portfolio site ScreenRoot" />
+                                            <img fetchpriority="high" src="images/projects/albersan.webp" alt="Meliston - Albersan portfolio site ScreenRoot" />
                                         </a>
                                     </div>
                                     <div class="row row-gap-3">
@@ -905,25 +909,25 @@
                                             </div>
                                             <div class="technology d-flex flex-row flex-wrap gap-3 gap-lg-4 justify-content-start">
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/html5.svg" alt="HtML 5" />
+                                                    <img fetchpriority="high" src="images/icons/html5.svg" alt="HtML 5" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/css3.svg" alt="CSS 3" />
+                                                    <img fetchpriority="high" src="images/icons/css3.svg" alt="CSS 3" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/jquery.svg" alt="JQuery" />
+                                                    <img fetchpriority="high" src="images/icons/jquery.svg" alt="JQuery" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/sass.svg" alt="SASS" />
+                                                    <img fetchpriority="high" src="images/icons/sass.svg" alt="SASS" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/php.svg" alt="PHP" />
+                                                    <img fetchpriority="high" src="images/icons/php.svg" alt="PHP" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/wordpress.svg" alt="Wordpress" />
+                                                    <img fetchpriority="high" src="images/icons/wordpress.svg" alt="Wordpress" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/gsap.svg" alt="GSAP" />
+                                                    <img fetchpriority="high" src="images/icons/gsap.svg" alt="GSAP" />
                                                 </div>
                                             </div>
                                         </div>
@@ -934,7 +938,7 @@
                                 <div class="blocks d-flex flex-column flex-lg-row gap-3 gap-lg-4 py-4 py-lg-5">
                                     <div class="image z-3 overflow-hidden">
                                         <a href="synapse.co" target="_blank" rel="noopener noreferrer" class="d-flex" aria-label="Albersan">
-                                            <img fetchpriority=high src="images/projects/ahilya-fort.webp" alt="Meliston - Albersan portfolio site ScreenRoot" />
+                                            <img fetchpriority="high" src="images/projects/ahilya-fort.webp" alt="Meliston - Albersan portfolio site ScreenRoot" />
                                         </a>
                                     </div>
                                     <div class="row row-gap-3">
@@ -949,25 +953,25 @@
                                             </div>
                                             <div class="technology d-flex flex-row flex-wrap gap-3 gap-lg-4 justify-content-start">
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/html5.svg" alt="HtML 5" />
+                                                    <img fetchpriority="high" src="images/icons/html5.svg" alt="HtML 5" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/css3.svg" alt="CSS 3" />
+                                                    <img fetchpriority="high" src="images/icons/css3.svg" alt="CSS 3" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/jquery.svg" alt="JQuery" />
+                                                    <img fetchpriority="high" src="images/icons/jquery.svg" alt="JQuery" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/sass.svg" alt="SASS" />
+                                                    <img fetchpriority="high" src="images/icons/sass.svg" alt="SASS" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/php.svg" alt="PHP" />
+                                                    <img fetchpriority="high" src="images/icons/php.svg" alt="PHP" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/wordpress.svg" alt="Wordpress" />
+                                                    <img fetchpriority="high" src="images/icons/wordpress.svg" alt="Wordpress" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/gsap.svg" alt="GSAP" />
+                                                    <img fetchpriority="high" src="images/icons/gsap.svg" alt="GSAP" />
                                                 </div>
                                             </div>
                                         </div>
@@ -978,7 +982,7 @@
                                 <div class="blocks d-flex flex-column flex-lg-row gap-3 gap-lg-4 py-4 py-lg-5">
                                     <div class="image z-3 overflow-hidden">
                                         <a href="synapse.co" target="_blank" rel="noopener noreferrer" class="d-flex" aria-label="Albersan">
-                                            <img fetchpriority=high src="images/projects/presentation-support.webp" alt="Meliston - Albersan portfolio site ScreenRoot" />
+                                            <img fetchpriority="high" src="images/projects/presentation-support.webp" alt="Meliston - Albersan portfolio site ScreenRoot" />
                                         </a>
                                     </div>
                                     <div class="row row-gap-3">
@@ -993,25 +997,25 @@
                                             </div>
                                             <div class="technology d-flex flex-row flex-wrap gap-3 gap-lg-4 justify-content-start">
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/html5.svg" alt="HtML 5" />
+                                                    <img fetchpriority="high" src="images/icons/html5.svg" alt="HtML 5" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/css3.svg" alt="CSS 3" />
+                                                    <img fetchpriority="high" src="images/icons/css3.svg" alt="CSS 3" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/jquery.svg" alt="JQuery" />
+                                                    <img fetchpriority="high" src="images/icons/jquery.svg" alt="JQuery" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/sass.svg" alt="SASS" />
+                                                    <img fetchpriority="high" src="images/icons/sass.svg" alt="SASS" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/php.svg" alt="PHP" />
+                                                    <img fetchpriority="high" src="images/icons/php.svg" alt="PHP" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/wordpress.svg" alt="Wordpress" />
+                                                    <img fetchpriority="high" src="images/icons/wordpress.svg" alt="Wordpress" />
                                                 </div>
                                                 <div class="icon d-flex">
-                                                    <img fetchpriority=high src="images/icons/gsap.svg" alt="GSAP" />
+                                                    <img fetchpriority="high" src="images/icons/gsap.svg" alt="GSAP" />
                                                 </div>
                                             </div>
                                         </div>
@@ -1121,58 +1125,142 @@
                     <div class="col">
                         <div class="swiper mySwiper testimonialsSwiper pt-5 pt-lg-5">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide" aria-roledescription="slide" aria-label="Testimonial 1 of 4">
+                                <div class="swiper-slide" aria-roledescription="slide" aria-label="Testimonial 1 of 10">
                                     <div class="blocks p-3 p-lg-4 p-xl-5 position-relative h-100">
-                                        <div class="description mb-5">Working with Meliston was a game-changer for our project. His eye for detail and commitment to seamless user experiences brought our vision to life. We’ve seen remarkable feedback from our users thanks to his design and development skills.</div>
+                                        <div class="description mb-5">Working with Meliston elevated our entire product experience. His attention to detail, structured development approach, and mastery of UI interactions helped us deliver a platform our users truly enjoy.</div>
                                         <div class="author-profile d-flex flex-row flex-nowrap gap-2 gap-lg-3 align-items-bottom">
                                             <div class="image position-relative z-1">
-                                                <img fetchpriority=high src="images/testimonials/alexandra-thompson.webp" alt="Meliston - Client testimonials" />
+                                                <img fetchpriority="high" src="images/testimonials/ananya-deshmukh.webp" alt="Meliston - Client testimonials" />
                                             </div>
                                             <div class="name-designation d-flex flex-column gap-1 gap-lg-2 justify-content-center position-relative z-1">
-                                                <div class="name"><strong>Alexandra Thompson</strong></div>
-                                                <div class="designation">Product Manager, TechWave Solutions</div>
+                                                <div class="name"><strong>Ananya Deshmukh</strong></div>
+                                                <div class="designation">Product Manager, NexaTech Innovations</div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-slide" aria-roledescription="slide" aria-label="Testimonial 2 of 4">
+                                <div class="swiper-slide" aria-roledescription="slide" aria-label="Testimonial 2 of 10">
                                     <div class="blocks p-3 p-lg-4 p-xl-5 position-relative h-100">
-                                        <div class="description mb-5">Meliston combines technical expertise with a genuine passion for frontend development. He transformed our website into a fast, responsive, and visually engaging platform, which has significantly improved user engagement. We couldn't be happier with the results!</div>
+                                        <div class="description mb-5">Meliston transformed our website into a clean, responsive, and high-performing system. His frontend expertise and ability to understand business goals made a huge difference in our digital strategy.</div>
                                         <div class="author-profile d-flex flex-row flex-nowrap gap-2 gap-lg-3 align-items-bottom">
                                             <div class="image position-relative z-1">
-                                                <img fetchpriority=high src="images/testimonials/rahul-verma.webp" alt="Meliston - Client testimonials" />
+                                                <img fetchpriority="high" src="images/testimonials/rahul-verma.webp" alt="Meliston - Client testimonials" />
                                             </div>
                                             <div class="name-designation d-flex flex-column gap-1 gap-lg-2 justify-content-center position-relative z-1">
                                                 <div class="name"><strong>Rahul Verma</strong></div>
-                                                <div class="designation">Digital Marketing Head, BrightNet</div>
+                                                <div class="designation">Digital Marketing Head, BrightNet Solutions</div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-slide" aria-roledescription="slide" aria-label="Testimonial 3 of 4">
+                                <div class="swiper-slide" aria-roledescription="slide" aria-label="Testimonial 3 of 10">
                                     <div class="blocks p-3 p-lg-4 p-xl-5 position-relative h-100">
-                                        <div class="description mb-5">Meliston’s ability to blend design and functionality is impressive. He developed custom solutions that perfectly aligned with our brand’s identity. His work has boosted our online presence and made navigating our site enjoyable for visitors.</div>
+                                        <div class="description mb-5">His combination of design sensitivity and frontend engineering is rare. The custom components he built improved usability across our website and strengthened our brand presence.</div>
                                         <div class="author-profile d-flex flex-row flex-nowrap gap-2 gap-lg-3 align-items-bottom">
                                             <div class="image position-relative z-1">
-                                                <img fetchpriority=high src="images/testimonials/jessica-lee.webp" alt="Meliston - Client testimonials" />
+                                                <img fetchpriority="high" src="images/testimonials/priya-iyer.webp" alt="Meliston - Client testimonials" />
                                             </div>
                                             <div class="name-designation d-flex flex-column gap-1 gap-lg-2 justify-content-center position-relative z-1">
-                                                <div class="name"><strong>Jessica Lee</strong></div>
-                                                <div class="designation">Creative Director, SparkLab Agency</div>
+                                                <div class="name"><strong>Priya Iyer</strong></div>
+                                                <div class="designation">Creative Director, Willow & White Studio</div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-slide" aria-roledescription="slide" aria-label="Testimonial 4 of 4">
+                                <div class="swiper-slide" aria-roledescription="slide" aria-label="Testimonial 4 of 10">
                                     <div class="blocks p-3 p-lg-4 p-xl-5 position-relative h-100">
-                                        <div class="description mb-5">From concept to execution, Meliston was a true professional. His coding expertise and eye for design transformed our ideas into a beautiful, highly functional website. I would recommend him to anyone looking to elevate their digital experience.</div>
+                                        <div class="description mb-5">Thanks to Meliston, our platform now loads faster and feels smoother. His ability to translate ideas into functional and elegant interfaces is exceptional.</div>
                                         <div class="author-profile d-flex flex-row flex-nowrap gap-2 gap-lg-3 align-items-bottom">
                                             <div class="image position-relative z-1">
-                                                <img fetchpriority=high src="images/testimonials/david-kim.webp" alt="Meliston - Client testimonials" />
+                                                <img fetchpriority="high" src="images/testimonials/karthik-srinivasan.webp" alt="Meliston - Client testimonials" />
                                             </div>
                                             <div class="name-designation d-flex flex-column gap-1 gap-lg-2 justify-content-center position-relative z-1">
-                                                <div class="name"><strong>David Kim</strong></div>
-                                                <div class="designation">Founder & CEO, VentureWorks</div>
+                                                <div class="name"><strong>Karthik Srinivasan</strong></div>
+                                                <div class="designation">Founder & CEO, CloudWing Labs</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" aria-roledescription="slide" aria-label="Testimonial 5 of 10">
+                                    <div class="blocks p-3 p-lg-4 p-xl-5 position-relative h-100">
+                                        <div class="description mb-5">Meliston’s work on our UI revamp resulted in measurable improvements in engagement and conversions. He ensures every pixel and interaction has purpose.</div>
+                                        <div class="author-profile d-flex flex-row flex-nowrap gap-2 gap-lg-3 align-items-bottom">
+                                            <div class="image position-relative z-1">
+                                                <img fetchpriority="high" src="images/testimonials/meera-bansal.webp" alt="Meliston - Client testimonials" />
+                                            </div>
+                                            <div class="name-designation d-flex flex-column gap-1 gap-lg-2 justify-content-center position-relative z-1">
+                                                <div class="name"><strong>Meera Bansal</strong></div>
+                                                <div class="designation">UX Lead, PixelBridge Interactive</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" aria-roledescription="slide" aria-label="Testimonial 6 of 10">
+                                    <div class="blocks p-3 p-lg-4 p-xl-5 position-relative h-100">
+                                        <div class="description mb-5">He took complete ownership of the frontend, improving performance, accessibility, and responsiveness. His work ethic and clarity in communication made the collaboration seamless.</div>
+                                        <div class="author-profile d-flex flex-row flex-nowrap gap-2 gap-lg-3 align-items-bottom">
+                                            <div class="image position-relative z-1">
+                                                <img fetchpriority="high" src="images/testimonials/arvind-nair.webp" alt="Meliston - Client testimonials" />
+                                            </div>
+                                            <div class="name-designation d-flex flex-column gap-1 gap-lg-2 justify-content-center position-relative z-1">
+                                                <div class="name"><strong>Arvind Nair</strong></div>
+                                                <div class="designation">Senior Manager - Digital Platforms, FinServe India</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" aria-roledescription="slide" aria-label="Testimonial 7 of 10">
+                                    <div class="blocks p-3 p-lg-4 p-xl-5 position-relative h-100">
+                                        <div class="description mb-5">Our project required complex UI structures and animations, and Meliston delivered them flawlessly. His GSAP expertise brought a level of polish that impressed our entire team.</div>
+                                        <div class="author-profile d-flex flex-row flex-nowrap gap-2 gap-lg-3 align-items-bottom">
+                                            <div class="image position-relative z-1">
+                                                <img fetchpriority="high" src="images/testimonials/rhea-kapoor.webp" alt="Meliston - Client testimonials" />
+                                            </div>
+                                            <div class="name-designation d-flex flex-column gap-1 gap-lg-2 justify-content-center position-relative z-1">
+                                                <div class="name"><strong>Rhea Kapoor</strong></div>
+                                                <div class="designation">Project Lead, MotionCraft Agency</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" aria-roledescription="slide" aria-label="Testimonial 8 of 10">
+                                    <div class="blocks p-3 p-lg-4 p-xl-5 position-relative h-100">
+                                        <div class="description mb-5">What stood out the most is Meliston’s ability to simplify complex workflows with clean, intuitive interfaces. Our customers noticed the positive change immediately.</div>
+                                        <div class="author-profile d-flex flex-row flex-nowrap gap-2 gap-lg-3 align-items-bottom">
+                                            <div class="image position-relative z-1">
+                                                <img fetchpriority="high" src="images/testimonials/siddharth-jain.webp" alt="Meliston - Client testimonials" />
+                                            </div>
+                                            <div class="name-designation d-flex flex-column gap-1 gap-lg-2 justify-content-center position-relative z-1">
+                                                <div class="name"><strong>Siddharth Jain</strong></div>
+                                                <div class="designation">Co-Founder, BookMart Retail Tech</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" aria-roledescription="slide" aria-label="Testimonial 9 of 10">
+                                    <div class="blocks p-3 p-lg-4 p-xl-5 position-relative h-100">
+                                        <div class="description mb-5">From wireframes to deployment, Meliston handled the frontend with solid precision. His code quality, speed, and problem-solving made him an invaluable contributor.</div>
+                                        <div class="author-profile d-flex flex-row flex-nowrap gap-2 gap-lg-3 align-items-bottom">
+                                            <div class="image position-relative z-1">
+                                                <img fetchpriority="high" src="images/testimonials/neha-garg.webp" alt="Meliston - Client testimonials" />
+                                            </div>
+                                            <div class="name-designation d-flex flex-column gap-1 gap-lg-2 justify-content-center position-relative z-1">
+                                                <div class="name"><strong>Neha Garg</strong></div>
+                                                <div class="designation">Head of Product Design, Vistara Systems</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" aria-roledescription="slide" aria-label="Testimonial 10 of 10">
+                                    <div class="blocks p-3 p-lg-4 p-xl-5 position-relative h-100">
+                                        <div class="description mb-5">Meliston understood our brand vision perfectly and built a modern, fast, and responsive frontend that exceeded expectations. His professionalism and creativity make him a standout developer.</div>
+                                        <div class="author-profile d-flex flex-row flex-nowrap gap-2 gap-lg-3 align-items-bottom">
+                                            <div class="image position-relative z-1">
+                                                <img fetchpriority="high" src="images/testimonials/harshad-kulkarni.webp" alt="Meliston - Client testimonials" />
+                                            </div>
+                                            <div class="name-designation d-flex flex-column gap-1 gap-lg-2 justify-content-center position-relative z-1">
+                                                <div class="name"><strong>Harshad Kulkarni</strong></div>
+                                                <div class="designation">Founder, Zenith Webmedia</div>
                                             </div>
                                         </div>
                                     </div>

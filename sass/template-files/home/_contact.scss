@@ -3,6 +3,9 @@ section.contact {
     background-color: color(theme, 5);
     background-size: 35%;
     background-blend-mode: multiply;
+    @include bp(mobile) {
+        background-size: 85%;
+    }
     .contact-info {
         position: relative;
         border-radius: $rounded-more;

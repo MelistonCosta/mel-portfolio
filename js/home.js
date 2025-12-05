@@ -345,12 +345,18 @@ jQuery(document).ready(function($) {
         breakpoints: {
             320: {
                 slidesPerView: 1,
+                slidesPerGroup: 1,
+                speed: 1200,
             },
             768: {
                 slidesPerView: 2,
+                slidesPerGroup: 2,
+                speed: 2400,
             },
             1200: {
                 slidesPerView: 3,
+                slidesPerGroup: 2,
+                speed: 2400,
             },
         }
     });
