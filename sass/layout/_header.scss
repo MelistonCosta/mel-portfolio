@@ -40,9 +40,11 @@ header {
             }
         }
         .whatsapp {
-            i {
+            svg {
+                width: 25px;
+                height: 28px;
                 @include font-custom(28px, 28px);
-                color: color(theme, 1);
+                fill: color(theme, 1);
             }
         }
         .navigation {
