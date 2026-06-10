@@ -77,11 +77,11 @@ jQuery(document).ready(function($) {
     }, "<")
     tlHomeBanner.to("section.custom-banner-animation", {
         backgroundColor: "#FFFCF2",
-        duration: 1.5,
+        duration: .25,
     }, "<")
     .to("section.home-banner", {
         backgroundColor: "#FFFCF2",
-        duration: 1.5,
+        duration: .25,
     }, "<")
     .to("section.custom-banner-animation .first, section.custom-banner-animation .last", {
         color: "#1F7A8C",

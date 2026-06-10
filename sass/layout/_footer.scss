@@ -21,8 +21,8 @@ footer {
             background-image: linear-gradient(to bottom, transparentize(color(theme, 6), .5), color(theme, 1) 90%);
             color: transparent;
             background-clip: text;
-            @include bp(mobile) {
-                font-size: 17vw;
+            @include bp(tablet) {
+                font-size: 12vw;
             }
         }
         p {

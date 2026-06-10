@@ -29,6 +29,9 @@ main {
         @include bp(tablet) {
             padding-top: 90px;
         }
+        @include bp(mobile) {
+            padding-top: 62px;
+        }
     }
 }
 
@@ -222,7 +225,7 @@ button, .button {
 }
 
 .section-heading {
-    h2 {
+    h1, h2 {
         color: color(black, 100);
         @include font-custom(80px, 86px);
         @include bp(mobile) {
