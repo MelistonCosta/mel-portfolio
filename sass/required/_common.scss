@@ -118,7 +118,7 @@ button, .button {
         fill: color(white, 100);
         transition: $transition-smooth;
     }
-    &:hover {
+    &:hover, &:focus {
         color: color(theme, 1);
         background-color: color(white, 100);
         // box-shadow: -9px -9px 0px -5px color(white, 100), 9px 9px 0px -5px color(white, 100);

@@ -3,18 +3,17 @@ $(document).ready(function () {
     /****************************************************/
     // Password Protected Page
     const correctPassword = "@Hadr!an";
-    if (sessionStorage.getItem("authenticated") === "true") {
-        $("body").show();
-        return;
+    if (sessionStorage.getItem("authenticated") !== "true") {
+        const password = prompt("Enter Password:");
+        if (password === correctPassword) {
+            sessionStorage.setItem("authenticated", "true");
+        } else {
+            alert("Access Denied!");
+            window.location.href = "/";
+            return; // Stop all remaining JS
+        }
     }
-    const password = prompt("Enter Password:");
-    if (password === correctPassword) {
-        sessionStorage.setItem("authenticated", "true");
-        $("body").show();
-    } else {
-        alert("Access Denied!");
-        window.location.href = "/";
-    }
+    $("body").show();
     /****************************************************/
 
 
@@ -85,6 +84,31 @@ $(document).ready(function () {
     }
     /****************************************************/
 
+
+
+
+
+
+
+    $(".target-blocks .blocks").each(function () {
+        const $block = $(this);
+        const $images = $block.find(".image img");
+        let interval;
+        $block.on("mouseenter", function () {
+            if ($images.length <= 1) return;
+            interval = setInterval(function () {
+                let currentIndex = $images.index($images.filter(".active"));
+                let nextIndex = (currentIndex + 1) % $images.length;
+                $images.removeClass("active");
+                $images.eq(nextIndex).addClass("active");
+            }, 2000);
+        });
+        $block.on("mouseleave", function () {
+            clearInterval(interval);
+            // $images.removeClass("active");
+            // $images.eq(0).addClass("active");
+        });
+    });
 
 
 
