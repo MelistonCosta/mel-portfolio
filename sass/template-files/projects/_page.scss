@@ -48,6 +48,13 @@ section.my-projects {
                         font-family: $font-secondary;
                         @include font-custom(20px, 24px);
                         color: color(theme, 1);
+                        span {
+                            font-family: $font-primary;
+                            @include font-custom(14px, 18px);
+                            font-weight: 400;
+                            color: color(black, 600);
+                            text-transform: none;
+                        }
                     }
                     .description {
                         display: -webkit-box;
