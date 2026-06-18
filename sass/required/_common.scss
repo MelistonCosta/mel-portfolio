@@ -232,6 +232,13 @@ button, .button {
             @include font-custom(34px, 40px);
         }
     }
+    h3 {
+        color: color(black, 100);
+        @include font-custom(40px, 46px);
+        @include bp(mobile) {
+            @include font-custom(24px, 30px);
+        }
+    }
     p {
         @include font-custom(20px, 26px);
         color: color(black, 500);

@@ -1,9 +1,27 @@
 section.my-projects {
+    /* Freelance */
+    --freelance-color: #22C55E; /* Green */
+    /* Corporate */
+    --corporate-color: #2563EB; /* Blue */
     .all-projects {
         .target-blocks {
             .blocks {
                 border-radius: $rounded;
                 border: 1px solid color(white, 200);
+                position: relative;
+                &::before {
+                    content: "";
+                    width: 30px;
+                    height: 30px;
+                    position: absolute;
+                    bottom: 25px;
+                    right: 16px;
+                    background-color: transparent;
+                    border-radius: $round;
+                    opacity: 0;
+                    transform: scale(.8);
+                    transition: $transition-smooth;
+                }
                 .image-container {
                     border-radius: $rounded;
                     .image {
@@ -67,6 +85,22 @@ section.my-projects {
 
                     }
                 }
+                &:hover {
+                    &::before {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                }
+                &.freelance {
+                    &::before {
+                        background-color: var(--freelance-color);
+                    }
+                }
+                &.corporate {
+                    &::before {
+                        background-color: var(--corporate-color);
+                    }
+                }
             }
             &:nth-child(3n+1) {
                 padding-top: 100px;
@@ -88,6 +122,28 @@ section.my-projects {
                     }
                 }
             }
+        }
+    }
+    .projects-legend {
+        background-color: transparentize(color(white, 200), .5);
+        border-radius: $rounded-more;
+        @include bp(mobile) {
+            border-radius: $rounded;
+        }
+        .blocks {
+            background-color: color(white, 100);
+            border-radius: $rounded-more;
+            border: 2px solid var(--box-color);
+            @include bp(mobile) {
+                border-radius: $rounded;
+                border: 1px solid var(--box-color);
+            }
+            .title {
+                @include font-custom(20px, 26px);
+                font-weight: 600;
+                color: var(--box-color);
+            }
+            p {}
         }
     }
 }
