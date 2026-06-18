@@ -4,11 +4,14 @@ section.my-projects {
     /* Corporate */
     --corporate-color: #2563EB; /* Blue */
     .all-projects {
+        counter-reset: projectCounter;
         .target-blocks {
+            counter-increment: projectCounter;
             .blocks {
+                position: relative;
                 border-radius: $rounded;
                 border: 1px solid color(white, 200);
-                position: relative;
+                background-color: color(theme, 5);
                 &::before {
                     content: "";
                     width: 30px;
@@ -20,6 +23,19 @@ section.my-projects {
                     border-radius: $round;
                     opacity: 0;
                     transform: scale(.8);
+                    transition: $transition-smooth;
+                }
+                &::after {
+                    content: counter(projectCounter);
+                    position: absolute;
+                    bottom: 100%;
+                    right: 0;
+                    font-family: $font-secondary;
+                    @include font-custom(50px, 50px);
+                    line-height: .4;
+                    font-weight: 900;
+                    z-index: -1;
+                    color: transparentize(color(white, 400), .8);
                     transition: $transition-smooth;
                 }
                 .image-container {
@@ -89,6 +105,10 @@ section.my-projects {
                     &::before {
                         opacity: 1;
                         transform: scale(1);
+                    }
+                    &::after {
+                        line-height: .7;
+                        color: transparentize(color(white, 400), .5);
                     }
                 }
                 &.freelance {
