@@ -96,6 +96,9 @@ section.my-projects {
                         -webkit-box-orient: vertical;
                         overflow: hidden;
                         text-overflow: ellipsis;
+                        @include bp(mobile) {
+                            -webkit-line-clamp: 10;
+                        }
                     }
                     .btn-holder {
 
