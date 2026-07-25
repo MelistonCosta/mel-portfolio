@@ -78,6 +78,7 @@ section.my-projects {
                     }
                 }
                 .content {
+                    padding-bottom: 60px;
                     .title {
                         font-family: $font-secondary;
                         @include font-custom(20px, 24px);
@@ -92,7 +93,7 @@ section.my-projects {
                     }
                     .description {
                         display: -webkit-box;
-                        -webkit-line-clamp: 5;
+                        -webkit-line-clamp: 6;
                         -webkit-box-orient: vertical;
                         overflow: hidden;
                         text-overflow: ellipsis;
@@ -100,9 +101,11 @@ section.my-projects {
                             -webkit-line-clamp: 10;
                         }
                     }
-                    .btn-holder {
-
-                    }
+                }
+                .btn-holder {
+                    position: absolute;
+                    left: 16px;
+                    bottom: 16px;
                 }
                 &:hover {
                     &::before {
