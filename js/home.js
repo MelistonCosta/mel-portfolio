@@ -84,7 +84,7 @@ jQuery(document).ready(function($) {
         duration: .25,
     }, "<")
     .to("section.custom-banner-animation .first, section.custom-banner-animation .last", {
-        color: "#1F7A8C",
+        color: "#054770",
         duration: 1.5,
     }, "<")
     .fromTo("header", {
