@@ -59,7 +59,7 @@ section.home-banner {
             margin-right: -120px;
             border: 20px solid color(theme, 5);
             background-color: color(theme, 5);
-            border-radius: 0 $rounded-more 0 0;
+            border-radius: 0 $rounded 0 0;
             @include bp(desktop-sm) {
                 margin-right: 0;
                 border-left: none;
@@ -75,7 +75,7 @@ section.home-banner {
                 right: -70px;
                 height: 50px;
                 width: 50px;
-                border-bottom-left-radius: $rounded-more;
+                border-bottom-left-radius: $rounded;
                 background-color: transparent;
                 box-shadow: -20px 20px 0 20px color(theme, 5);
             }
@@ -96,10 +96,10 @@ section.home-banner {
             margin-left: 0;
         }
         img {
-            border-radius: $rounded-more;
+            border-radius: $rounded;
             object-fit: cover;
             @include bp(mobile) {
-                border-radius: $rounded-less;
+                border-radius: $rounded;
             }
         }
         .btn-holder {
@@ -112,7 +112,7 @@ section.home-banner {
                 left: -50px;
                 height: 30px;
                 width: 30px;
-                border-bottom-right-radius: $rounded-more;
+                border-bottom-right-radius: $rounded;
                 background-color: transparent;
                 box-shadow: 10px 10px 0 10px color(theme, 5);
                 @include bp(mobile) {
@@ -120,7 +120,7 @@ section.home-banner {
                     width: 30px;
                     box-shadow: 5px 10px 0 5px color(theme, 5);
                     left: -44px;
-                    border-bottom-right-radius: $rounded-less;
+                    border-bottom-right-radius: $rounded;
                 }
             }
             &::after {
