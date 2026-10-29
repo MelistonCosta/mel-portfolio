@@ -62,7 +62,8 @@ section.custom-banner-animation {
                 right: 0;
                 top: 0;
                 bottom: 0;
-                background: color(green, 1);
+                // background: color(green, 1);
+                background: color(theme, 2);
                 border-radius: 50%;
                 opacity: 0;
                 transform: scale(0);
@@ -79,7 +80,8 @@ section.custom-banner-animation {
             }
         }
         .tag {
-            color: color(black, 1);
+            color: color(black, 100);
+            font-family: $font-secondary;
         }
     }
 }
