@@ -108,7 +108,7 @@ button, .button {
     background-color: color(theme, 1);
     padding: 12px 36px;
     border: 1px solid color(theme, 1);
-    border-radius: $rounded;
+    border-radius: $rounded-more;
     transition: $transition-smooth;
     svg {
         width: 16px;
