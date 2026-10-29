@@ -108,7 +108,7 @@ button, .button {
     background-color: color(theme, 1);
     padding: 12px 36px;
     border: 1px solid color(theme, 1);
-    border-radius: $rounded-more;
+    border-radius: $rounded;
     transition: $transition-smooth;
     svg {
         width: 16px;
@@ -231,12 +231,18 @@ button, .button {
         @include bp(mobile) {
             @include font-custom(34px, 40px);
         }
+        strong {
+            color: color(theme, 1);
+        }
     }
     h3 {
         color: color(black, 100);
         @include font-custom(40px, 46px);
         @include bp(mobile) {
             @include font-custom(24px, 30px);
+        }
+        strong {
+            color: color(theme, 1);
         }
     }
     p {
