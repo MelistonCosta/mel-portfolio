@@ -86,6 +86,34 @@ section.experience {
                     margin: 0;
                 }
             }
+            .ripple-me {
+                position: absolute;
+                left: -13px;
+                top: 53px;
+                background: color(theme, 6);
+                width: 30px;
+                height: 30px;
+                border-radius: $round;
+                z-index: -1;
+                transform-origin: center;
+                opacity: 0;
+                transform: scale(0);
+                animation: rippleEffect 2s infinite linear;
+                @include bp(tablet) {
+                    top: 28px;
+                }
+                &:nth-child(2) {
+                    width: 20px;
+                    height: 20px;
+                    left: -8px;
+                    top: 58px;
+                    background: color(theme, 4);
+                    animation: rippleEffect 2s infinite 1s linear;
+                    @include bp(tablet) {
+                        top: 33px;
+                    }
+                }
+            }
         }
     }
 }
