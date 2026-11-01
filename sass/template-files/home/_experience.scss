@@ -1,0 +1,91 @@
+section.experience {
+    .section-heading {
+        position: sticky;
+        top: 120px;
+    }
+    .experience-cards {
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background: color(theme, 1);
+            width: 5px;
+            border-radius: $round;
+        }
+        .cards {
+            &::before {
+                content: "";
+                position: absolute;
+                background: color(theme, 2);
+                left: -8px;
+                top: 58px;
+                width: 20px;
+                height: 20px;
+                border-radius: $round;
+                @include bp(tablet) {
+                    top: 33px;
+                }
+            }
+            &::after {
+                content: "";
+                border-top: 2px dashed color(black, 400);
+                position: absolute;
+                left: 0;
+                top: 67px;
+                width: 70px;
+                z-index: -1;
+                @include bp(tablet) {
+                    top: 42px;
+                }
+            }
+            .year-co {
+                .year {
+                    font-family: $font-secondary;
+                    width: 150px;
+                    border-radius: $rounded;
+                    @include font-custom(16px, 18px);
+                    font-weight: 600;
+                    background: color(white, 100);
+                    color: color(theme, 1);
+                    border: 2px dashed color(black, 400);
+                    @include bp(desktop-sm) {
+                        width: auto;
+                    }
+                    @include bp(tablet) {
+                        width: 150px;
+                    }
+                }
+                .image {
+                    img {
+                        border: 2px solid color(theme, 2);
+                        border-radius: $rounded;
+                    }
+                }
+                .title {
+                    a {
+                        font-family: $font-secondary;
+                        color: color(theme, 1);
+                        @include font-custom(16px, 18px);
+                    }
+                }
+            }
+            .content {
+                background: color(theme, 6);
+                border-radius: $rounded;
+                h3 {
+                    font-family: $font-secondary;
+                    @include font-custom(16px, 18px);
+                    border-radius: $rounded;
+                    background-color: transparentize(color(theme, 2), .8);
+                    color: color(theme, 1);
+                    font-weight: 600;
+                }
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
