@@ -13,7 +13,7 @@ section.contact {
         background: color(theme, 1);
         backdrop-filter: blur(4px);
         @include bp(mobile) {
-            border-radius: $rounded;
+            border-radius: $rounded-less;
         }
         #form-animation {
             position: absolute;
@@ -98,7 +98,7 @@ section.contact {
         background: transparentize(color(theme, 2), .5);
         backdrop-filter: blur(4px);
         @include bp(mobile) {
-            border-radius: $rounded;
+            border-radius: $rounded-less;
         }
         form {
             padding: 12px 10px;

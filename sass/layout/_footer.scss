@@ -6,7 +6,7 @@ footer {
         background-color: color(theme, 6);
         color: color(black, 500);
         @include bp(mobile) {
-            border-radius: $rounded;
+            border-radius: $rounded-less;
         }
         p {
             color: color(black, 500);

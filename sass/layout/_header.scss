@@ -5,10 +5,11 @@ header {
     z-index: 999;
     // transition: $transition-linear;
     background-color: transparent;
-    backdrop-filter: blur(20px);
+    // backdrop-filter: blur(20px);
     .border-box {
-        background-color: transparentize(color(theme, 1), .9);
-        border-radius: $rounded;
+        background-color: transparentize(color(white, 100), .2);
+        border-radius: $rounded-more;
+        backdrop-filter: blur(10px);
     }
     .mobile-menu {
         .icon {

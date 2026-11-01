@@ -17,7 +17,7 @@ section.skills {
             padding: 20px;
             box-shadow: 0px 15px 10px -16px transparentize(color(black, 500), .5);
             @include bp(mobile-sm) {
-                border-radius: $rounded;
+                border-radius: $rounded-less;
             }
             img {
                 width: 100%;
